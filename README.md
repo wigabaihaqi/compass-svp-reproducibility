@@ -22,9 +22,47 @@ This repository implements the novel **COMPASS-SVP** framework alongside a compr
 
 ## Repository Structure
 
+
 ```text
-├── gabungan-FE-PLV-VV.csv        # Processed feature dataset for Verbal-Visual dimension
-├── gabungan-FE-PLV-AR.csv        # Processed feature dataset for Active-Reflective dimension
-├── verbal_visual_evaluation.ipynb  # Complete evaluation notebook for Verbal-Visual dimension
-├── active_reflective_evaluation.ipynb # Complete evaluation notebook for Active-Reflective dimension
-└── README.md                     # Project documentation
+├── gabungan-FE-PLV-VV.csv              # Processed feature dataset for Verbal-Visual dimension
+├── gabungan-FE-PLV-AR.csv              # Processed feature dataset for Active-Reflective dimension
+├── verbal_visual_evaluation.ipynb      # Complete evaluation notebook for Verbal-Visual dimension
+├── active_reflective_evaluation.ipynb  # Complete evaluation notebook for Active-Reflective dimension
+└── README.md                           # Project documentation
+```
+
+## Dataset Format
+
+## Dataset Format
+
+The dataset files contain multi-channel EEG connectivity features extracted via Phase Locking Value (PLV).
+
+- **subject**: Unique identifier for each participant.
+- **trial**: Experimental session or trial identifier.
+- **label**: Target category (verbal vs. visual for VV; aktif vs. reflektif for AR).
+- **Feature Columns (-)**: Connectivity strength values across electrode pairs.
+
+## Installation & Prerequisites
+
+Ensure you have Python 3.8+ and Jupyter Notebook installed. The project relies on the following core libraries for scientific computing, machine learning, and deep learning workflows:
+
+```bash
+pip install pandas numpy scikit-learn tensorflow scipy matplotlib jupyter
+```
+## How to Run
+
+* Place your dataset files (`gabungan-FE-PLV-VV.csv` and `gabungan-FE-PLV-AR.csv`) in the root directory.
+* Launch Jupyter Notebook from your terminal:
+
+```bash
+jupyter notebook
+```
+* Open either ```verbal_visual_evaluation.ipynb ``` or ```active_reflective_evaluation.ipynb``` to execute all comprehensive benchmarks, ablation studies, and deep learning models interactively.
+
+## Evaluation Protocol
+* All experiments follow a strict Leave-One-Subject-Out (LOSO) cross-validation strategy:
+* Subject-Wise Standardization: Features are scaled independently per subject using ```StandardScaler``` to remove inter-subject physiological variance.
+* Instance Prediction: Models predict labels across temporal sliding windows.
+* Hierarchical Aggregation:
+  * Windows are aggregated into Trials via majority voting.
+  * Trials are aggregated into final Subject-level classifications using strict frequency thresholds and controlled tie-breaking mechanisms.
