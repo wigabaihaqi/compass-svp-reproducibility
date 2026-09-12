@@ -1,6 +1,3 @@
-# compass-svp-reproducibility
-Official reproducibility package and evaluation notebooks for the paper COMPASS-SVP.
-
 # EEG-Based Learning Style Classification Framework 
 ## COMPASS-SVP & Comprehensive Machine Learning Benchmarks
 
