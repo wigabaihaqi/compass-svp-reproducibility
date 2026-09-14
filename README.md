@@ -24,10 +24,10 @@ This repository implements the novel **COMPASS-SVP** framework alongside a compr
 
 
 ```text
-├── gabungan-FE-PLV-VV.csv              # Processed feature dataset for Verbal-Visual dimension
-├── gabungan-FE-PLV-AR.csv              # Processed feature dataset for Active-Reflective dimension
-├── verbal_visual_evaluation.ipynb      # Complete evaluation notebook for Verbal-Visual dimension
-├── active_reflective_evaluation.ipynb  # Complete evaluation notebook for Active-Reflective dimension
+├── combined_fe_plv_vv.csv              # Processed feature dataset for Verbal-Visual dimension
+├── combined_fe_plv_ar.csv              # Processed feature dataset for Active-Reflective dimension
+├── COMPASS_SVP_Evaluation_VV.ipynb     # Complete evaluation notebook for Verbal-Visual dimension
+├── COMPASS_SVP_Evaluation_AR.ipynb     # Complete evaluation notebook for Active-Reflective dimension
 └── README.md                           # Project documentation
 ```
 
@@ -51,13 +51,13 @@ pip install pandas numpy scikit-learn tensorflow scipy matplotlib jupyter
 ```
 ## How to Run
 
-* Place your dataset files (`gabungan-FE-PLV-VV.csv` and `gabungan-FE-PLV-AR.csv`) in the root directory.
+* Place your dataset files (`combined_fe_plv_vv.csv` and `combined_fe_plv_ar.csv`) in the root directory.
 * Launch Jupyter Notebook from your terminal:
 
 ```bash
 jupyter notebook
 ```
-* Open either ```verbal_visual_evaluation.ipynb ``` or ```active_reflective_evaluation.ipynb``` to execute all comprehensive benchmarks, ablation studies, and deep learning models interactively.
+* Open either ```COMPASS_SVP_Evaluation_VV.ipynb ``` or ```COMPASS_SVP_Evaluation_AR.ipynb``` to execute all comprehensive benchmarks, ablation studies, and deep learning models interactively.
 
 ## Evaluation Protocol
 * All experiments follow a strict Leave-One-Subject-Out (LOSO) cross-validation strategy:
