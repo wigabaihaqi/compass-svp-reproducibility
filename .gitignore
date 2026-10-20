@@ -1,0 +1,21 @@
+# Python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+
+# EEG data that is not redistributed (see data/README.md)
+data/raw_source/*
+!data/raw_source/.gitkeep
+data/raw_eeg_vv/*.csv
+data/raw_eeg_ar/*.csv
+data/subjects_manifest.csv
+data/segmentation_report.csv
+
+# Manuscript and review documents (not part of the reproducibility package)
+/*.docx
+/*.doc
+/*.pdf
+~$*

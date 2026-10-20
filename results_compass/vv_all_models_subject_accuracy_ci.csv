@@ -1,0 +1,12 @@
+model,correct,n,acc_%,ci_low_%,ci_high_%
+COMPASS-SVP (Euclidean),8,10,80.0,44.4,97.5
+COMPASS-SVP (Cosine),4,10,40.0,12.2,73.8
+SVM (Baseline),7,10,70.0,34.8,93.3
+Random Forest (Baseline),2,10,20.0,2.5,55.6
+MLP (Baseline),4,10,40.0,12.2,73.8
+KNN (Baseline),4,10,40.0,12.2,73.8
+Adapted LSTM-CNN [14],7,10,70.0,34.8,93.3
+Random Forest + ANOVA [15],4,10,40.0,12.2,73.8
+KNN + ANOVA [15],3,10,30.0,6.7,65.2
+MLP + ANOVA [15],5,10,50.0,18.7,81.3
+MIL-RF [11],0,10,0.0,0.0,30.8

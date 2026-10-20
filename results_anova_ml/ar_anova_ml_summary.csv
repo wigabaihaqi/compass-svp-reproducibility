@@ -1,0 +1,4 @@
+,Win Acc (%),Trial Acc (%),Trial Macro F1 (%),Subj Acc (%),Subj Correct,95% CI (%),Subj Macro Prec (%),Subj Macro Rec (%),Subj Macro F1 (%),Subj Acc Flat Vote (%),TN,FP,FN,TP,Subject Ties
+Random Forest + ANOVA [15],56.37,52.78,51.43,55.56,10/18,"[30.8, 78.5]",56.92,55.56,53.25,50.0,7,2,6,3,0
+KNN + ANOVA [15],55.89,50.28,49.62,50.0,9/18,"[26.0, 74.0]",50.0,50.0,48.57,50.0,6,3,6,3,0
+MLP + ANOVA [15],53.59,48.89,48.04,50.0,9/18,"[26.0, 74.0]",50.0,50.0,48.57,44.44,6,3,6,3,0

@@ -1,0 +1,2 @@
+model,epochs,Win Acc (%),Trial Acc (%),Trial Macro F1 (%),Subj Acc (%),Subj Correct,95% CI (%),Subj Macro Prec (%),Subj Macro Rec (%),Subj Macro F1 (%),Subj Acc Flat Vote (%),TN,FP,FN,TP,Subject Ties
+Adapted LSTM-CNN [14],15,71.43,73.5,73.39,70.0,7/10,"[34.8, 93.3]",70.83,70.0,69.7,70.0,4,1,2,3,0

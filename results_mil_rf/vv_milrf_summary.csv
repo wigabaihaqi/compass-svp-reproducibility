@@ -1,0 +1,2 @@
+model,mode,Instance Acc (%),Trial Acc (%),Trial Macro F1 (%),Subj Acc (%),Subj Correct,95% CI (%),Subj Macro Prec (%),Subj Macro Rec (%),Subj Macro F1 (%),Subj Acc Flat Vote (%),TN,FP,FN,TP,Subject Ties
+MIL-RF [11],pair,32.14,11.5,10.86,0.0,0/10,"[0.0, 30.8]",0.0,0.0,0.0,0.0,0,5,5,0,0
