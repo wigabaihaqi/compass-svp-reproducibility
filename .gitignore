@@ -19,3 +19,11 @@ data/segmentation_report.csv
 /*.doc
 /*.pdf
 ~$*
+
+# Backup of the original subject-8 window file (contained a copy of subject 9)
+data/raw_eeg_ar/*.bak
+
+# Local working folders (not part of the package)
+/backup_sebelum_fix_s8/
+/Revisi_AR_20Okt/
+data/*.bak

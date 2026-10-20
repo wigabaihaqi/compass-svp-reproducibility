@@ -1,9 +1,9 @@
 model_A,model_B,only_A_correct (b),only_B_correct (c),delta_acc_pp,p_mcnemar_exact,p_mcnemar_holm
-Full System - Euclidean,Scenario A (w/o K-Means) - Euclidean,5,7,-11.11,0.7744,1.0
-Full System - Euclidean,Scenario B (w/o SVM Sifting) - Euclidean,2,0,11.11,0.5,1.0
-Full System - Euclidean,"Scenario C (Single Prototype, K=1) - Euclidean",2,7,-27.78,0.1797,0.7188
-Full System - Euclidean,SVM (Baseline),5,7,-11.11,0.7744,1.0
-Full System - Cosine,Scenario A (w/o K-Means) - Cosine,8,1,38.89,0.0391,0.1564
-Full System - Cosine,Scenario B (w/o SVM Sifting) - Cosine,4,1,16.67,0.375,1.0
-Full System - Cosine,"Scenario C (Single Prototype, K=1) - Cosine",5,2,16.67,0.4531,1.0
-Full System - Cosine,SVM (Baseline),4,3,5.56,1.0,1.0
+Full System - Euclidean,Scenario A (w/o K-Means) - Euclidean,6,5,5.56,1.0,1.0
+Full System - Euclidean,Scenario B (w/o SVM Sifting) - Euclidean,5,3,11.11,0.7266,1.0
+Full System - Euclidean,"Scenario C (Single Prototype, K=1) - Euclidean",2,3,-5.56,1.0,1.0
+Full System - Euclidean,SVM (Baseline),6,4,11.11,0.7539,1.0
+Full System - Cosine,Scenario A (w/o K-Means) - Cosine,8,2,33.33,0.1094,0.4376
+Full System - Cosine,Scenario B (w/o SVM Sifting) - Cosine,5,3,11.11,0.7266,1.0
+Full System - Cosine,"Scenario C (Single Prototype, K=1) - Cosine",3,0,16.67,0.25,0.75
+Full System - Cosine,SVM (Baseline),5,4,5.56,1.0,1.0

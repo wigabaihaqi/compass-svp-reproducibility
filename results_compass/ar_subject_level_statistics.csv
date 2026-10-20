@@ -1,20 +1,20 @@
 model_A,model_B,n_subjects,both_correct,only_A_correct (b),only_B_correct (c),both_wrong,delta_acc_pp,p_mcnemar_exact,p_permutation_exact,p_mcnemar_holm
-COMPASS-SVP (Euclidean),COMPASS-SVP (Cosine),18,8,2,2,6,0.0,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),SVM (Baseline),18,5,5,3,5,11.11,0.7266,0.7266,1.0
-COMPASS-SVP (Euclidean),Random Forest (Baseline),18,5,5,3,5,11.11,0.7266,0.7266,1.0
-COMPASS-SVP (Euclidean),MLP (Baseline),18,5,5,2,6,16.67,0.4531,0.4531,1.0
-COMPASS-SVP (Euclidean),KNN (Baseline),18,6,4,3,5,5.56,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),Adapted LSTM-CNN [14],18,4,6,6,2,0.0,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),Random Forest + ANOVA [15],18,6,4,4,4,0.0,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),KNN + ANOVA [15],18,6,4,3,5,5.56,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),MLP + ANOVA [15],18,6,4,3,5,5.56,1.0,1.0,1.0
-COMPASS-SVP (Euclidean),MIL-RF [11],18,6,4,5,3,-5.56,1.0,1.0,1.0
-COMPASS-SVP (Cosine),SVM (Baseline),18,4,6,4,4,11.11,0.7539,0.7539,1.0
-COMPASS-SVP (Cosine),Random Forest (Baseline),18,5,5,3,5,11.11,0.7266,0.7266,1.0
-COMPASS-SVP (Cosine),MLP (Baseline),18,4,6,3,5,16.67,0.5078,0.5078,1.0
-COMPASS-SVP (Cosine),KNN (Baseline),18,6,4,3,5,5.56,1.0,1.0,1.0
-COMPASS-SVP (Cosine),Adapted LSTM-CNN [14],18,4,6,6,2,0.0,1.0,1.0,1.0
-COMPASS-SVP (Cosine),Random Forest + ANOVA [15],18,5,5,5,3,0.0,1.0,1.0,1.0
-COMPASS-SVP (Cosine),KNN + ANOVA [15],18,5,5,4,4,5.56,1.0,1.0,1.0
-COMPASS-SVP (Cosine),MLP + ANOVA [15],18,5,5,4,4,5.56,1.0,1.0,1.0
-COMPASS-SVP (Cosine),MIL-RF [11],18,7,3,4,4,-5.56,1.0,1.0,1.0
+COMPASS-SVP (Euclidean),COMPASS-SVP (Cosine),18,3,2,5,8,-16.67,0.4531,0.4531,1.0
+COMPASS-SVP (Euclidean),SVM (Baseline),18,4,1,2,11,-5.56,1.0,1.0,1.0
+COMPASS-SVP (Euclidean),Random Forest (Baseline),18,3,2,3,10,-5.56,1.0,1.0,1.0
+COMPASS-SVP (Euclidean),MLP (Baseline),18,3,2,2,11,0.0,1.0,1.0,1.0
+COMPASS-SVP (Euclidean),KNN (Baseline),18,2,3,5,8,-11.11,0.7266,0.7266,1.0
+COMPASS-SVP (Euclidean),Adapted LSTM-CNN [14],18,2,3,7,6,-22.22,0.3438,0.3438,1.0
+COMPASS-SVP (Euclidean),Random Forest + ANOVA [15],18,2,3,5,8,-11.11,0.7266,0.7266,1.0
+COMPASS-SVP (Euclidean),KNN + ANOVA [15],18,2,3,2,11,5.56,1.0,1.0,1.0
+COMPASS-SVP (Euclidean),MLP + ANOVA [15],18,4,1,4,9,-16.67,0.375,0.375,1.0
+COMPASS-SVP (Euclidean),MIL-RF [11],18,5,0,5,8,-27.78,0.0625,0.0625,0.625
+COMPASS-SVP (Cosine),SVM (Baseline),18,2,6,4,6,11.11,0.7539,0.7539,1.0
+COMPASS-SVP (Cosine),Random Forest (Baseline),18,3,5,3,7,11.11,0.7266,0.7266,1.0
+COMPASS-SVP (Cosine),MLP (Baseline),18,2,6,3,7,16.67,0.5078,0.5078,1.0
+COMPASS-SVP (Cosine),KNN (Baseline),18,2,6,5,5,5.56,1.0,1.0,1.0
+COMPASS-SVP (Cosine),Adapted LSTM-CNN [14],18,4,4,5,5,-5.56,1.0,1.0,1.0
+COMPASS-SVP (Cosine),Random Forest + ANOVA [15],18,2,6,5,5,5.56,1.0,1.0,1.0
+COMPASS-SVP (Cosine),KNN + ANOVA [15],18,1,7,3,7,22.22,0.3438,0.3438,1.0
+COMPASS-SVP (Cosine),MLP + ANOVA [15],18,3,5,5,5,0.0,1.0,1.0,1.0
+COMPASS-SVP (Cosine),MIL-RF [11],18,5,3,5,5,-11.11,0.7266,0.7266,1.0
