@@ -62,3 +62,5 @@ One row per 1-s window (300 windows per subject).
 | `Fp1-Fp2`, ..., `O1-O2` | 28 upper-triangular channel-pair values (i < j; 8 x 7 / 2), no diagonal, no duplicated pairs |
 
 Features are stored without normalization; every analysis script applies subject-wise z-scoring.
+Each subject contributes only the trial indices of its own recording (20 distinct `trial` values per
+subject, not shared with any other subject).

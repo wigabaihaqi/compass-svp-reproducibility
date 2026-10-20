@@ -90,7 +90,7 @@ in `results_lstmcnn/`.
 |---|---|---|
 | Section 2.1.3 (filtering, 1-s windows) | `00a_segment_eeg.py` | `data/raw_eeg_<dim>/*.csv`, `data/segmentation_report.csv` |
 | Section 2.2 (PLV, 28 features); Table 4 input (wPLI) | `00b_extract_connectivity.py` | `data/combined_fe_<plv\|wpli>_<dim>.csv` |
-| Section 3.2, Fig. 3 (WCSS profiles, K = 2) | `01_wcss_profiles.py` | `results_wcss/<dim>_wcss_per_fold.csv`, `<dim>_wcss_summary.csv`, `<dim>_wcss_convergence.png/.pdf` |
+| Section 3.2, Fig. 3 (WCSS profiles, K = 2; VV top, AR bottom) | `01_wcss_profiles.py` | `results_wcss/<dim>_wcss_per_fold.csv`, `<dim>_wcss_summary.csv`, `<dim>_wcss_convergence.png/.pdf`; the two panels are stacked in `Figure3_WCSS_VV_AR_combined.png` |
 | Table 1 (benchmark, window -> trial -> subject levels; Section 3.10) | `05_compass_svp_benchmark.py` | `results_compass/<dim>_benchmark_summary.csv` |
 | Section 3.6 (robustness to K-Means initialization, 20 seeds) | `08_kmeans_robustness.py` | `results_compass/kmeans_initialization_robustness.csv`, `kmeans_initialization_robustness_summary.csv` |
 | Supplementary figure of the window / trial / subject accuracy (not in the manuscript; values in Table 1) | `09_fusion_levels_figure.py` | `results_compass/fig6_hierarchical_fusion_levels.png/.pdf/.csv` |
@@ -101,6 +101,16 @@ in `results_lstmcnn/`.
 | Fig. 4 (decision geometry; VV left, AR right) | `07_compass_svp_geometry.py` | `results_compass-svp_geometry/<dim>_tsne_geometry.png/.pdf`; the two panels are placed side by side in `Figure4_tSNE_VV_AR_combined.png` |
 
 `<dim>` is `vv` (Verbal-Visual, n = 10 subjects) or `ar` (Active-Reflective, n = 18 subjects).
+
+### Data correction (Active-Reflective, subject 8)
+
+The window file of Active subject 8 (`data/raw_eeg_ar/active-subject8-preprocessed.csv`) originally
+contained, after the subject's own 300 windows, a copy of the recording of subject 9 and a second copy of
+its own windows. Feature extraction therefore assigned the subject-9 windows to subject 8, so that the
+earlier AR feature files contained subject 9 twice and lacked subject 8. The window file was reduced to the
+subject's own 300 windows, the AR features were re-extracted with `00b_extract_connectivity.py`, and all AR
+results in the `results_*` folders were regenerated; the VV files are unaffected. In the released
+`combined_fe_<plv|wpli>_ar.csv`, subject 8 has the trial indices 141-160 and subject 9 has 161-180.
 
 ### Audit files (per-subject predictions, confusion matrices, folds, choice of K)
 
