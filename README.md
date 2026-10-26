@@ -54,13 +54,14 @@ compass-svp-reproducibility/
 │   ├── 06_compass_svp_ablation.py      # component ablation (PLV) and wPLI control analysis
 │   ├── 07_compass_svp_geometry.py      # t-SNE visualization of the fitted model
 │   ├── 08_kmeans_robustness.py         # COMPASS-SVP over 20 K-Means seeds (initialization robustness)
-│   └── 09_fusion_levels_figure.py      # supplementary figure: window / trial / subject accuracy (values in Table 1)
+│   ├── 09_fusion_levels_figure.py      # supplementary figure: window / trial / subject accuracy (values in Table 1)
+│   └── 10_label_permutation.py         # subject-level label-permutation test against chance
 │
 ├── results_wcss/                       # output of step 01
 ├── results_anova_ml/                   # output of step 02
 ├── results_mil_rf/                     # output of step 03
 ├── results_lstmcnn/                    # output of step 04
-├── results_compass/                    # output of steps 05, 08 and 09
+├── results_compass/                    # output of steps 05, 08, 09 and 10
 ├── results_ablation/                   # output of step 06
 └── results_compass-svp_geometry/       # output of step 07
 ```
@@ -77,7 +78,8 @@ raw OpenBCI recordings ──00a──> filtered 1-s windows ──00b──> PL
                                                                      ├──06  ablation (PLV) / control analysis (wPLI)
                                                                      ├──07  t-SNE geometry
                                                                      ├──08  robustness to K-Means initialization
-                                                                     └──09  supplementary fusion-level figure
+                                                                     ├──09  supplementary fusion-level figure
+                                                                     └──10  label-permutation test against chance
 ```
 
 Steps 00a, 00b and 04 need the (non-redistributed) EEG recordings. Every other result can be reproduced
@@ -95,6 +97,7 @@ in `results_lstmcnn/`.
 | Section 3.6 (robustness to K-Means initialization, 20 seeds) | `08_kmeans_robustness.py` | `results_compass/kmeans_initialization_robustness.csv`, `kmeans_initialization_robustness_summary.csv` |
 | Supplementary figure of the window / trial / subject accuracy (not in the manuscript; values in Table 1) | `09_fusion_levels_figure.py` | `results_compass/fig6_hierarchical_fusion_levels.png/.pdf/.csv` |
 | Section 3.6 (exact CI, McNemar, permutation tests) | `05_compass_svp_benchmark.py` | `results_compass/<dim>_subject_level_statistics.csv`, `<dim>_all_models_subject_accuracy_ci.csv` |
+| Section 3.6 (label-permutation test against chance; pipeline retrained for every permutation) | `10_label_permutation.py` (VV: exact, 252 assignments; AR: `--n-perm 300`) | `results_compass/<dim>_label_permutation_summary.csv`, `<dim>_label_permutation_null.csv` |
 | Table 2 (component ablation, VV and AR) | `06_compass_svp_ablation.py --feature plv` | `results_ablation/<dim>_plv_ablation_summary.csv`, `<dim>_plv_ablation_statistics.csv` |
 | Table 3 (state-of-the-art comparison, VV and AR) | `02`, `03`, `04`, then `05` | summaries in `results_anova_ml/`, `results_mil_rf/`, `results_lstmcnn/`; tests in `results_compass/` |
 | Table 4 (wPLI control analysis) | `06_compass_svp_ablation.py --feature wpli` | `results_ablation/<dim>_wpli_ablation_summary.csv` |
@@ -163,14 +166,16 @@ python scripts/06_compass_svp_ablation.py  --dimension VV --feature wpli
 python scripts/07_compass_svp_geometry.py  --dimension VV
 python scripts/08_kmeans_robustness.py                       # both dimensions, 20 seeds
 python scripts/09_fusion_levels_figure.py                    # supplementary fusion-level figure (after step 05 for VV and AR)
+python scripts/10_label_permutation.py --dimension VV        # exact label-permutation test (about 10 min)
+python scripts/10_label_permutation.py --dimension AR --n-perm 300   # 300 random permutations (about 1 h)
 ```
 
 Replace `VV` by `AR` for the Active-Reflective dimension. Steps 02-04 must be run before step 05, which loads
 their subject-level predictions for the paired tests (missing files are skipped with a message). Every script
-prints its options with `--help`.
+prints its options with `--help`. Step 10 is not part of `run_all.sh` because of its runtime.
 
 The `results_*` folders already contain the outputs reported in the manuscript. With the package versions
-in `requirements.txt`, steps 01-03 and 05-09 reproduce them exactly (all random seeds are fixed to 42).
+in `requirements.txt`, steps 01-03 and 05-10 reproduce them exactly (all random seeds are fixed to 42).
 The LSTM-CNN (step 04) and the t-SNE layout of step 07 can differ slightly between machines, because
 TensorFlow training and floating-point summation order are not fully deterministic across hardware.
 

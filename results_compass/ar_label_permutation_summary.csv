@@ -1,0 +1,3 @@
+dimension,feature,metric,test,n_permutations,observed_subj_acc_%,null_mean_%,null_95th_percentile_%,n_null_at_least_observed,p_permutation
+AR,plv,euclidean,random,300,27.78,48.89,66.67,295,0.9834
+AR,plv,cosine,random,300,44.44,49.33,66.67,227,0.7575

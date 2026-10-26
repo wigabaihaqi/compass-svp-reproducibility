@@ -1,0 +1,3 @@
+dimension,feature,metric,test,n_permutations,observed_subj_acc_%,null_mean_%,null_95th_percentile_%,n_null_at_least_observed,p_permutation
+VV,plv,euclidean,exact,252,80.0,45.2,80.0,16,0.0635
+VV,plv,cosine,exact,252,40.0,48.21,80.0,191,0.7579
