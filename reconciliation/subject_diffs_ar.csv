@@ -1,0 +1,109 @@
+model,subject,true_class,v1_pred,v1_trials_class1_of_20,v1_correct,A0_pred,A0_trials_class1_of_20,A0_correct,A_pred,A_trials_class1_of_20,A_correct,B_pred,B_trials_class1_of_20,B_correct,correctness_changed_in
+COMPASS-SVP (Euclidean),1,active,reflective,16,False,active,10,True,reflective,10,False,active,6,True,v1->A0 A0->A A->B
+COMPASS-SVP (Euclidean),2,active,reflective,15,False,reflective,12,False,reflective,12,False,reflective,12,False,-
+COMPASS-SVP (Euclidean),3,active,reflective,12,False,reflective,14,False,reflective,14,False,reflective,12,False,-
+COMPASS-SVP (Euclidean),4,active,active,7,True,active,7,True,active,7,True,reflective,11,False,A->B
+COMPASS-SVP (Euclidean),5,active,reflective,13,False,reflective,13,False,reflective,13,False,reflective,12,False,-
+COMPASS-SVP (Euclidean),6,active,reflective,15,False,reflective,14,False,reflective,14,False,reflective,14,False,-
+COMPASS-SVP (Euclidean),7,active,active,9,True,active,10,True,reflective,10,False,reflective,10,False,A0->A
+COMPASS-SVP (Euclidean),8,active,active,8,True,active,7,True,active,7,True,reflective,20,False,A->B
+COMPASS-SVP (Euclidean),9,active,active,8,True,active,7,True,active,7,True,active,5,True,-
+COMPASS-SVP (Euclidean),10,reflective,active,8,False,active,5,False,active,5,False,active,7,False,-
+COMPASS-SVP (Euclidean),11,reflective,reflective,11,True,reflective,11,True,reflective,11,True,active,7,False,A->B
+COMPASS-SVP (Euclidean),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+COMPASS-SVP (Euclidean),13,reflective,reflective,11,True,reflective,11,True,reflective,11,True,active,9,False,A->B
+COMPASS-SVP (Euclidean),14,reflective,reflective,14,True,reflective,14,True,reflective,14,True,active,6,False,A->B
+COMPASS-SVP (Euclidean),15,reflective,active,8,False,active,10,False,reflective,10,True,active,7,False,A0->A A->B
+COMPASS-SVP (Euclidean),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+COMPASS-SVP (Euclidean),17,reflective,active,6,False,active,4,False,active,4,False,active,5,False,-
+COMPASS-SVP (Euclidean),18,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+COMPASS-SVP (Cosine),1,active,reflective,15,False,reflective,17,False,reflective,17,False,reflective,10,False,-
+COMPASS-SVP (Cosine),2,active,reflective,12,False,reflective,13,False,reflective,13,False,reflective,12,False,-
+COMPASS-SVP (Cosine),3,active,reflective,11,False,reflective,11,False,reflective,11,False,reflective,10,False,-
+COMPASS-SVP (Cosine),4,active,active,6,True,active,6,True,active,6,True,active,9,True,-
+COMPASS-SVP (Cosine),5,active,active,6,True,active,6,True,active,6,True,active,9,True,-
+COMPASS-SVP (Cosine),6,active,active,10,True,active,10,True,reflective,10,False,reflective,15,False,A0->A
+COMPASS-SVP (Cosine),7,active,active,3,True,active,2,True,active,2,True,active,3,True,-
+COMPASS-SVP (Cosine),8,active,active,9,True,active,6,True,active,6,True,reflective,20,False,A->B
+COMPASS-SVP (Cosine),9,active,active,9,True,active,6,True,active,6,True,active,7,True,-
+COMPASS-SVP (Cosine),10,reflective,active,9,False,active,9,False,active,9,False,active,7,False,-
+COMPASS-SVP (Cosine),11,reflective,active,10,False,active,10,False,reflective,10,True,active,8,False,A0->A A->B
+COMPASS-SVP (Cosine),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+COMPASS-SVP (Cosine),13,reflective,reflective,12,True,reflective,12,True,reflective,12,True,reflective,12,True,-
+COMPASS-SVP (Cosine),14,reflective,reflective,12,True,reflective,12,True,reflective,12,True,active,9,False,A->B
+COMPASS-SVP (Cosine),15,reflective,reflective,12,True,active,6,False,active,6,False,reflective,13,True,v1->A0 A->B
+COMPASS-SVP (Cosine),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+COMPASS-SVP (Cosine),17,reflective,active,6,False,active,6,False,active,6,False,active,7,False,-
+COMPASS-SVP (Cosine),18,reflective,active,0,False,active,0,False,active,0,False,active,0,False,-
+SVM (Baseline),1,active,active,9,True,active,9,True,active,9,True,active,9,True,-
+SVM (Baseline),2,active,reflective,11,False,reflective,11,False,reflective,11,False,reflective,12,False,-
+SVM (Baseline),3,active,active,2,True,active,2,True,active,2,True,active,3,True,-
+SVM (Baseline),4,active,reflective,18,False,reflective,18,False,reflective,18,False,reflective,19,False,-
+SVM (Baseline),5,active,reflective,19,False,reflective,19,False,reflective,19,False,reflective,20,False,-
+SVM (Baseline),6,active,active,5,True,active,5,True,active,5,True,active,5,True,-
+SVM (Baseline),7,active,reflective,16,False,reflective,16,False,reflective,16,False,reflective,17,False,-
+SVM (Baseline),8,active,active,0,True,active,0,True,active,0,True,reflective,20,False,A->B
+SVM (Baseline),9,active,active,0,True,active,0,True,active,0,True,reflective,19,False,A->B
+SVM (Baseline),10,reflective,active,3,False,active,3,False,active,3,False,active,7,False,-
+SVM (Baseline),11,reflective,active,3,False,active,3,False,active,3,False,active,3,False,-
+SVM (Baseline),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+SVM (Baseline),13,reflective,active,1,False,active,1,False,active,1,False,active,3,False,-
+SVM (Baseline),14,reflective,active,2,False,active,2,False,active,2,False,active,4,False,-
+SVM (Baseline),15,reflective,active,3,False,active,3,False,active,3,False,active,5,False,-
+SVM (Baseline),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+SVM (Baseline),17,reflective,active,3,False,active,3,False,active,3,False,active,4,False,-
+SVM (Baseline),18,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+Random Forest (Baseline),1,active,reflective,13,False,reflective,11,False,reflective,11,False,reflective,13,False,-
+Random Forest (Baseline),2,active,reflective,14,False,reflective,14,False,reflective,14,False,reflective,13,False,-
+Random Forest (Baseline),3,active,active,5,True,active,6,True,active,6,True,active,7,True,-
+Random Forest (Baseline),4,active,reflective,18,False,reflective,19,False,reflective,19,False,reflective,19,False,-
+Random Forest (Baseline),5,active,reflective,20,False,reflective,20,False,reflective,20,False,reflective,20,False,-
+Random Forest (Baseline),6,active,active,2,True,active,1,True,active,1,True,active,0,True,-
+Random Forest (Baseline),7,active,active,8,True,active,4,True,active,4,True,active,5,True,-
+Random Forest (Baseline),8,active,active,0,True,active,0,True,active,0,True,reflective,20,False,A->B
+Random Forest (Baseline),9,active,active,0,True,active,0,True,active,0,True,reflective,19,False,A->B
+Random Forest (Baseline),10,reflective,active,3,False,active,2,False,active,2,False,active,3,False,-
+Random Forest (Baseline),11,reflective,active,0,False,active,0,False,active,0,False,active,0,False,-
+Random Forest (Baseline),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+Random Forest (Baseline),13,reflective,active,0,False,active,0,False,active,0,False,active,0,False,-
+Random Forest (Baseline),14,reflective,active,1,False,active,2,False,active,2,False,active,2,False,-
+Random Forest (Baseline),15,reflective,active,2,False,active,1,False,active,1,False,active,1,False,-
+Random Forest (Baseline),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+Random Forest (Baseline),17,reflective,active,0,False,active,0,False,active,0,False,active,0,False,-
+Random Forest (Baseline),18,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+MLP (Baseline),1,active,active,9,True,reflective,11,False,reflective,11,False,reflective,11,False,v1->A0
+MLP (Baseline),2,active,reflective,11,False,active,10,True,reflective,10,False,reflective,12,False,v1->A0 A0->A
+MLP (Baseline),3,active,active,0,True,active,0,True,active,0,True,active,0,True,-
+MLP (Baseline),4,active,reflective,17,False,reflective,19,False,reflective,19,False,reflective,15,False,-
+MLP (Baseline),5,active,reflective,20,False,reflective,20,False,reflective,20,False,reflective,20,False,-
+MLP (Baseline),6,active,active,2,True,active,1,True,active,1,True,active,2,True,-
+MLP (Baseline),7,active,reflective,17,False,reflective,17,False,reflective,17,False,reflective,16,False,-
+MLP (Baseline),8,active,active,0,True,active,0,True,active,0,True,reflective,20,False,A->B
+MLP (Baseline),9,active,active,0,True,active,0,True,active,0,True,reflective,19,False,A->B
+MLP (Baseline),10,reflective,active,5,False,active,7,False,active,7,False,active,6,False,-
+MLP (Baseline),11,reflective,active,0,False,active,2,False,active,2,False,active,1,False,-
+MLP (Baseline),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+MLP (Baseline),13,reflective,active,1,False,active,2,False,active,2,False,active,0,False,-
+MLP (Baseline),14,reflective,active,1,False,active,2,False,active,2,False,active,2,False,-
+MLP (Baseline),15,reflective,active,0,False,active,1,False,active,1,False,active,0,False,-
+MLP (Baseline),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+MLP (Baseline),17,reflective,active,0,False,active,1,False,active,1,False,active,2,False,-
+MLP (Baseline),18,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+KNN (Baseline),1,active,reflective,13,False,reflective,13,False,reflective,13,False,reflective,14,False,-
+KNN (Baseline),2,active,reflective,14,False,reflective,14,False,reflective,14,False,reflective,14,False,-
+KNN (Baseline),3,active,active,6,True,active,6,True,active,6,True,active,7,True,-
+KNN (Baseline),4,active,reflective,19,False,reflective,19,False,reflective,19,False,reflective,19,False,-
+KNN (Baseline),5,active,reflective,20,False,reflective,20,False,reflective,20,False,reflective,20,False,-
+KNN (Baseline),6,active,active,7,True,active,7,True,active,7,True,active,7,True,-
+KNN (Baseline),7,active,active,4,True,active,4,True,active,4,True,active,8,True,-
+KNN (Baseline),8,active,active,0,True,active,0,True,active,0,True,reflective,20,False,A->B
+KNN (Baseline),9,active,active,0,True,active,0,True,active,0,True,reflective,19,False,A->B
+KNN (Baseline),10,reflective,active,5,False,active,5,False,active,5,False,active,6,False,-
+KNN (Baseline),11,reflective,active,1,False,active,1,False,active,1,False,active,1,False,-
+KNN (Baseline),12,reflective,reflective,20,True,reflective,20,True,reflective,20,True,active,0,False,A->B
+KNN (Baseline),13,reflective,active,4,False,active,4,False,active,4,False,active,6,False,-
+KNN (Baseline),14,reflective,active,10,False,active,10,False,reflective,10,True,reflective,13,True,A0->A
+KNN (Baseline),15,reflective,active,0,False,active,0,False,active,0,False,active,1,False,-
+KNN (Baseline),16,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-
+KNN (Baseline),17,reflective,active,7,False,active,7,False,active,7,False,reflective,10,True,A->B
+KNN (Baseline),18,reflective,reflective,20,True,reflective,20,True,reflective,20,True,reflective,20,True,-

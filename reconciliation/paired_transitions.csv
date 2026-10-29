@@ -1,0 +1,49 @@
+dimension,model,change,correct_before,correct_after,both_correct,only_before_correct,only_after_correct,both_wrong,subjects_lost,subjects_gained,p_mcnemar_exact
+VV,COMPASS-SVP (Euclidean),v1->A0 (n_init; software),8,8,7,1,1,1,7,9,1.0
+VV,COMPASS-SVP (Euclidean),A0->A (AR subject tie rule),8,8,8,0,0,2,-,-,1.0
+VV,COMPASS-SVP (Euclidean),A->B (AR subject-8 data),8,8,8,0,0,2,-,-,1.0
+VV,COMPASS-SVP (Euclidean),v1->B (total),8,8,7,1,1,1,7,9,1.0
+VV,COMPASS-SVP (Cosine),v1->A0 (n_init; software),3,4,3,0,1,6,-,8,1.0
+VV,COMPASS-SVP (Cosine),A0->A (AR subject tie rule),4,4,4,0,0,6,-,-,1.0
+VV,COMPASS-SVP (Cosine),A->B (AR subject-8 data),4,4,4,0,0,6,-,-,1.0
+VV,COMPASS-SVP (Cosine),v1->B (total),3,4,3,0,1,6,-,8,1.0
+VV,SVM (Baseline),v1->A0 (n_init; software),7,7,7,0,0,3,-,-,1.0
+VV,SVM (Baseline),A0->A (AR subject tie rule),7,7,7,0,0,3,-,-,1.0
+VV,SVM (Baseline),A->B (AR subject-8 data),7,7,7,0,0,3,-,-,1.0
+VV,SVM (Baseline),v1->B (total),7,7,7,0,0,3,-,-,1.0
+VV,Random Forest (Baseline),v1->A0 (n_init; software),2,2,1,1,1,7,4,9,1.0
+VV,Random Forest (Baseline),A0->A (AR subject tie rule),2,2,2,0,0,8,-,-,1.0
+VV,Random Forest (Baseline),A->B (AR subject-8 data),2,2,2,0,0,8,-,-,1.0
+VV,Random Forest (Baseline),v1->B (total),2,2,1,1,1,7,4,9,1.0
+VV,MLP (Baseline),v1->A0 (n_init; software),4,4,4,0,0,6,-,-,1.0
+VV,MLP (Baseline),A0->A (AR subject tie rule),4,4,4,0,0,6,-,-,1.0
+VV,MLP (Baseline),A->B (AR subject-8 data),4,4,4,0,0,6,-,-,1.0
+VV,MLP (Baseline),v1->B (total),4,4,4,0,0,6,-,-,1.0
+VV,KNN (Baseline),v1->A0 (n_init; software),4,4,4,0,0,6,-,-,1.0
+VV,KNN (Baseline),A0->A (AR subject tie rule),4,4,4,0,0,6,-,-,1.0
+VV,KNN (Baseline),A->B (AR subject-8 data),4,4,4,0,0,6,-,-,1.0
+VV,KNN (Baseline),v1->B (total),4,4,4,0,0,6,-,-,1.0
+AR,COMPASS-SVP (Euclidean),v1->A0 (n_init; software),10,11,10,0,1,7,-,1,1.0
+AR,COMPASS-SVP (Euclidean),A0->A (AR subject tie rule),11,10,9,2,1,6,1 7,15,1.0
+AR,COMPASS-SVP (Euclidean),A->B (AR subject-8 data),10,5,4,6,1,7,4 8 11 13 14 15,1,0.125
+AR,COMPASS-SVP (Euclidean),v1->B (total),10,5,4,6,1,7,4 7 8 11 13 14,1,0.125
+AR,COMPASS-SVP (Cosine),v1->A0 (n_init; software),11,10,10,1,0,7,15,-,1.0
+AR,COMPASS-SVP (Cosine),A0->A (AR subject tie rule),10,10,9,1,1,7,6,11,1.0
+AR,COMPASS-SVP (Cosine),A->B (AR subject-8 data),10,8,7,3,1,7,8 11 14,15,0.625
+AR,COMPASS-SVP (Cosine),v1->B (total),11,8,8,3,0,7,6 8 14,-,0.25
+AR,SVM (Baseline),v1->A0 (n_init; software),8,8,8,0,0,10,-,-,1.0
+AR,SVM (Baseline),A0->A (AR subject tie rule),8,8,8,0,0,10,-,-,1.0
+AR,SVM (Baseline),A->B (AR subject-8 data),8,6,6,2,0,10,8 9,-,0.5
+AR,SVM (Baseline),v1->B (total),8,6,6,2,0,10,8 9,-,0.5
+AR,Random Forest (Baseline),v1->A0 (n_init; software),8,8,8,0,0,10,-,-,1.0
+AR,Random Forest (Baseline),A0->A (AR subject tie rule),8,8,8,0,0,10,-,-,1.0
+AR,Random Forest (Baseline),A->B (AR subject-8 data),8,6,6,2,0,10,8 9,-,0.5
+AR,Random Forest (Baseline),v1->B (total),8,6,6,2,0,10,8 9,-,0.5
+AR,MLP (Baseline),v1->A0 (n_init; software),8,8,7,1,1,9,1,2,1.0
+AR,MLP (Baseline),A0->A (AR subject tie rule),8,7,7,1,0,10,2,-,1.0
+AR,MLP (Baseline),A->B (AR subject-8 data),7,5,5,2,0,11,8 9,-,0.5
+AR,MLP (Baseline),v1->B (total),8,5,5,3,0,10,1 8 9,-,0.25
+AR,KNN (Baseline),v1->A0 (n_init; software),8,8,8,0,0,10,-,-,1.0
+AR,KNN (Baseline),A0->A (AR subject tie rule),8,9,8,0,1,9,-,14,1.0
+AR,KNN (Baseline),A->B (AR subject-8 data),9,7,6,3,1,8,8 9 12,17,0.625
+AR,KNN (Baseline),v1->B (total),8,7,5,3,2,8,8 9 12,14 17,1.0

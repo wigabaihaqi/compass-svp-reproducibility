@@ -1,0 +1,4 @@
+comparison,identical,trial_ids_subject8
+original subject 8 vs subject 9,True,161-180
+corrected subject 8 vs subject 9,False,141-160
+"all other 16 subjects, original vs corrected file",True,-

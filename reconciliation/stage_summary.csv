@@ -1,0 +1,49 @@
+dimension,model,state,win_acc_%,trial_acc_%,subj_acc_%,subj_macro_f1_%,subj_correct,TN,FP,FN,TP
+VV,COMPASS-SVP (Euclidean),v1,68.8,74.0,80.0,80.0,8/10,4,1,1,4
+VV,COMPASS-SVP (Euclidean),A0,66.73,70.0,80.0,80.0,8/10,4,1,1,4
+VV,COMPASS-SVP (Euclidean),A,66.73,70.0,80.0,80.0,8/10,4,1,1,4
+VV,COMPASS-SVP (Euclidean),B,66.73,70.0,80.0,80.0,8/10,4,1,1,4
+VV,COMPASS-SVP (Cosine),v1,40.87,38.0,30.0,29.29,3/10,1,4,3,2
+VV,COMPASS-SVP (Cosine),A0,50.4,47.0,40.0,37.5,4/10,1,4,2,3
+VV,COMPASS-SVP (Cosine),A,50.4,47.0,40.0,37.5,4/10,1,4,2,3
+VV,COMPASS-SVP (Cosine),B,50.4,47.0,40.0,37.5,4/10,1,4,2,3
+VV,SVM (Baseline),v1,55.47,56.0,70.0,69.7,7/10,3,2,1,4
+VV,SVM (Baseline),A0,55.47,56.0,70.0,69.7,7/10,3,2,1,4
+VV,SVM (Baseline),A,55.47,56.0,70.0,69.7,7/10,3,2,1,4
+VV,SVM (Baseline),B,55.47,56.0,70.0,69.7,7/10,3,2,1,4
+VV,Random Forest (Baseline),v1,35.33,32.0,20.0,20.0,2/10,1,4,4,1
+VV,Random Forest (Baseline),A0,25.77,23.0,20.0,16.67,2/10,0,5,3,2
+VV,Random Forest (Baseline),A,25.77,23.0,20.0,16.67,2/10,0,5,3,2
+VV,Random Forest (Baseline),B,25.77,23.0,20.0,16.67,2/10,0,5,3,2
+VV,MLP (Baseline),v1,35.83,36.0,40.0,37.5,4/10,1,4,2,3
+VV,MLP (Baseline),A0,35.63,37.0,40.0,37.5,4/10,1,4,2,3
+VV,MLP (Baseline),A,35.63,37.0,40.0,37.5,4/10,1,4,2,3
+VV,MLP (Baseline),B,35.63,37.0,40.0,37.5,4/10,1,4,2,3
+VV,KNN (Baseline),v1,33.8,34.5,40.0,37.5,4/10,1,4,2,3
+VV,KNN (Baseline),A0,33.8,34.5,40.0,37.5,4/10,1,4,2,3
+VV,KNN (Baseline),A,33.8,34.5,40.0,37.5,4/10,1,4,2,3
+VV,KNN (Baseline),B,33.8,34.5,40.0,37.5,4/10,1,4,2,3
+AR,COMPASS-SVP (Euclidean),v1,57.33,54.17,55.56,55.0,10/18,4,5,3,6
+AR,COMPASS-SVP (Euclidean),A0,57.02,55.83,61.11,60.99,11/18,5,4,3,6
+AR,COMPASS-SVP (Euclidean),A,57.02,55.83,55.56,53.25,10/18,3,6,2,7
+AR,COMPASS-SVP (Euclidean),B,52.46,49.72,27.78,27.55,5/18,2,7,6,3
+AR,COMPASS-SVP (Cosine),v1,53.98,55.56,61.11,60.99,11/18,6,3,4,5
+AR,COMPASS-SVP (Cosine),A0,53.52,55.0,55.56,55.0,10/18,6,3,5,4
+AR,COMPASS-SVP (Cosine),A,53.52,55.0,55.56,55.56,10/18,5,4,4,5
+AR,COMPASS-SVP (Cosine),B,50.28,50.28,44.44,44.44,8/18,4,5,5,4
+AR,SVM (Baseline),v1,54.59,48.61,44.44,43.75,8/18,5,4,6,3
+AR,SVM (Baseline),A0,54.59,48.61,44.44,43.75,8/18,5,4,6,3
+AR,SVM (Baseline),A,54.59,48.61,44.44,43.75,8/18,5,4,6,3
+AR,SVM (Baseline),B,45.5,39.44,33.33,33.33,6/18,3,6,6,3
+AR,Random Forest (Baseline),v1,50.74,46.11,44.44,43.75,8/18,5,4,6,3
+AR,Random Forest (Baseline),A0,52.17,47.22,44.44,43.75,8/18,5,4,6,3
+AR,Random Forest (Baseline),A,52.17,47.22,44.44,43.75,8/18,5,4,6,3
+AR,Random Forest (Baseline),B,41.22,36.11,33.33,33.33,6/18,3,6,6,3
+AR,MLP (Baseline),v1,55.37,47.5,44.44,43.75,8/18,5,4,6,3
+AR,MLP (Baseline),A0,55.43,49.17,44.44,43.75,8/18,5,4,6,3
+AR,MLP (Baseline),A,55.43,49.17,38.89,38.7,7/18,4,5,6,3
+AR,MLP (Baseline),B,45.2,37.78,27.78,27.55,5/18,2,7,6,3
+AR,KNN (Baseline),v1,56.15,51.11,44.44,43.75,8/18,5,4,6,3
+AR,KNN (Baseline),A0,56.15,51.11,44.44,43.75,8/18,5,4,6,3
+AR,KNN (Baseline),A,56.15,51.11,50.0,49.85,9/18,5,4,5,4
+AR,KNN (Baseline),B,40.69,35.83,38.89,38.7,7/18,3,6,5,4

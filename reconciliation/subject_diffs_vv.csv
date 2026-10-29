@@ -1,0 +1,61 @@
+model,subject,true_class,v1_pred,v1_trials_class1_of_20,v1_correct,A0_pred,A0_trials_class1_of_20,A0_correct,A_pred,A_trials_class1_of_20,A_correct,B_pred,B_trials_class1_of_20,B_correct,correctness_changed_in
+COMPASS-SVP (Euclidean),1,verbal,visual,13,False,visual,13,False,visual,13,False,visual,13,False,-
+COMPASS-SVP (Euclidean),2,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+COMPASS-SVP (Euclidean),3,verbal,verbal,3,True,verbal,3,True,verbal,3,True,verbal,3,True,-
+COMPASS-SVP (Euclidean),4,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+COMPASS-SVP (Euclidean),5,verbal,verbal,6,True,verbal,6,True,verbal,6,True,verbal,6,True,-
+COMPASS-SVP (Euclidean),6,visual,visual,15,True,visual,15,True,visual,15,True,visual,15,True,-
+COMPASS-SVP (Euclidean),7,visual,visual,14,True,verbal,6,False,verbal,6,False,verbal,6,False,v1->A0
+COMPASS-SVP (Euclidean),8,visual,visual,20,True,visual,20,True,visual,20,True,visual,20,True,-
+COMPASS-SVP (Euclidean),9,visual,verbal,9,False,visual,11,True,visual,11,True,visual,11,True,v1->A0
+COMPASS-SVP (Euclidean),10,visual,visual,12,True,visual,10,True,visual,10,True,visual,10,True,-
+COMPASS-SVP (Cosine),1,verbal,visual,19,False,visual,19,False,visual,19,False,visual,19,False,-
+COMPASS-SVP (Cosine),2,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+COMPASS-SVP (Cosine),3,verbal,visual,14,False,visual,14,False,visual,14,False,visual,14,False,-
+COMPASS-SVP (Cosine),4,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+COMPASS-SVP (Cosine),5,verbal,visual,10,False,visual,10,False,visual,10,False,visual,10,False,-
+COMPASS-SVP (Cosine),6,visual,visual,13,True,visual,13,True,visual,13,True,visual,13,True,-
+COMPASS-SVP (Cosine),7,visual,verbal,9,False,verbal,8,False,verbal,8,False,verbal,8,False,-
+COMPASS-SVP (Cosine),8,visual,verbal,0,False,visual,20,True,visual,20,True,visual,20,True,v1->A0
+COMPASS-SVP (Cosine),9,visual,visual,10,True,visual,11,True,visual,11,True,visual,11,True,-
+COMPASS-SVP (Cosine),10,visual,verbal,7,False,verbal,5,False,verbal,5,False,verbal,5,False,-
+SVM (Baseline),1,verbal,visual,16,False,visual,16,False,visual,16,False,visual,16,False,-
+SVM (Baseline),2,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+SVM (Baseline),3,verbal,verbal,4,True,verbal,4,True,verbal,4,True,verbal,4,True,-
+SVM (Baseline),4,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+SVM (Baseline),5,verbal,visual,19,False,visual,19,False,visual,19,False,visual,19,False,-
+SVM (Baseline),6,visual,visual,13,True,visual,13,True,visual,13,True,visual,13,True,-
+SVM (Baseline),7,visual,visual,10,True,visual,10,True,visual,10,True,visual,10,True,-
+SVM (Baseline),8,visual,verbal,0,False,verbal,0,False,verbal,0,False,verbal,0,False,-
+SVM (Baseline),9,visual,visual,12,True,visual,12,True,visual,12,True,visual,12,True,-
+SVM (Baseline),10,visual,visual,16,True,visual,16,True,visual,16,True,visual,16,True,-
+Random Forest (Baseline),1,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+Random Forest (Baseline),2,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+Random Forest (Baseline),3,verbal,visual,13,False,visual,13,False,visual,13,False,visual,13,False,-
+Random Forest (Baseline),4,verbal,verbal,0,True,visual,20,False,visual,20,False,visual,20,False,v1->A0
+Random Forest (Baseline),5,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+Random Forest (Baseline),6,visual,verbal,7,False,verbal,6,False,verbal,6,False,verbal,6,False,-
+Random Forest (Baseline),7,visual,verbal,5,False,verbal,7,False,verbal,7,False,verbal,7,False,-
+Random Forest (Baseline),8,visual,verbal,0,False,verbal,0,False,verbal,0,False,verbal,0,False,-
+Random Forest (Baseline),9,visual,verbal,9,False,visual,10,True,visual,10,True,visual,10,True,v1->A0
+Random Forest (Baseline),10,visual,visual,16,True,visual,16,True,visual,16,True,visual,16,True,-
+MLP (Baseline),1,verbal,visual,16,False,visual,15,False,visual,15,False,visual,15,False,-
+MLP (Baseline),2,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+MLP (Baseline),3,verbal,verbal,0,True,verbal,0,True,verbal,0,True,verbal,0,True,-
+MLP (Baseline),4,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+MLP (Baseline),5,verbal,visual,19,False,visual,18,False,visual,18,False,visual,18,False,-
+MLP (Baseline),6,visual,verbal,6,False,verbal,7,False,verbal,7,False,verbal,7,False,-
+MLP (Baseline),7,visual,visual,12,True,visual,11,True,visual,11,True,visual,11,True,-
+MLP (Baseline),8,visual,verbal,0,False,verbal,0,False,verbal,0,False,verbal,0,False,-
+MLP (Baseline),9,visual,visual,12,True,visual,12,True,visual,12,True,visual,12,True,-
+MLP (Baseline),10,visual,visual,17,True,visual,17,True,visual,17,True,visual,17,True,-
+KNN (Baseline),1,verbal,visual,10,False,visual,10,False,visual,10,False,visual,10,False,-
+KNN (Baseline),2,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+KNN (Baseline),3,verbal,verbal,9,True,verbal,9,True,verbal,9,True,verbal,9,True,-
+KNN (Baseline),4,verbal,visual,20,False,visual,20,False,visual,20,False,visual,20,False,-
+KNN (Baseline),5,verbal,visual,17,False,visual,17,False,visual,17,False,visual,17,False,-
+KNN (Baseline),6,visual,visual,10,True,visual,10,True,visual,10,True,visual,10,True,-
+KNN (Baseline),7,visual,visual,12,True,visual,12,True,visual,12,True,visual,12,True,-
+KNN (Baseline),8,visual,verbal,0,False,verbal,0,False,verbal,0,False,verbal,0,False,-
+KNN (Baseline),9,visual,verbal,9,False,verbal,9,False,verbal,9,False,verbal,9,False,-
+KNN (Baseline),10,visual,visual,14,True,visual,14,True,visual,14,True,visual,14,True,-

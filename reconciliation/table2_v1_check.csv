@@ -1,0 +1,45 @@
+dimension,model,metric,manuscript_v1,notebook_v1,status
+VV,COMPASS-SVP (Euclidean),win_acc_%,68.8,68.8,match
+VV,COMPASS-SVP (Euclidean),trial_acc_%,74.0,74.0,match
+VV,COMPASS-SVP (Euclidean),subj_acc_%,80.0,80.0,match
+VV,COMPASS-SVP (Euclidean),subj_macro_f1_%,80.0,80.0,match
+VV,COMPASS-SVP (Cosine),win_acc_%,42.15,40.87,transcription error
+VV,COMPASS-SVP (Cosine),trial_acc_%,38.0,38.0,match
+VV,COMPASS-SVP (Cosine),subj_acc_%,30.0,30.0,match
+VV,COMPASS-SVP (Cosine),subj_macro_f1_%,28.5,29.29,transcription error
+VV,SVM (Baseline),win_acc_%,55.47,55.47,match
+VV,SVM (Baseline),trial_acc_%,56.0,56.0,match
+VV,SVM (Baseline),subj_acc_%,70.0,70.0,match
+VV,SVM (Baseline),subj_macro_f1_%,69.7,69.7,match
+VV,MLP (Baseline),win_acc_%,35.83,35.83,match
+VV,MLP (Baseline),trial_acc_%,36.0,36.0,match
+VV,MLP (Baseline),subj_acc_%,40.0,40.0,match
+VV,MLP (Baseline),subj_macro_f1_%,37.5,37.5,match
+VV,KNN (Baseline),win_acc_%,33.8,33.8,match
+VV,KNN (Baseline),trial_acc_%,34.5,34.5,match
+VV,KNN (Baseline),subj_acc_%,40.0,40.0,match
+VV,KNN (Baseline),subj_macro_f1_%,37.5,37.5,match
+AR,COMPASS-SVP (Euclidean),win_acc_%,51.2,57.33,transcription error
+AR,COMPASS-SVP (Euclidean),trial_acc_%,52.78,54.17,transcription error
+AR,COMPASS-SVP (Euclidean),subj_acc_%,55.56,55.56,match
+AR,COMPASS-SVP (Euclidean),subj_macro_f1_%,54.8,55.0,transcription error
+AR,COMPASS-SVP (Cosine),win_acc_%,53.98,53.98,match
+AR,COMPASS-SVP (Cosine),trial_acc_%,55.56,55.56,match
+AR,COMPASS-SVP (Cosine),subj_acc_%,61.11,61.11,match
+AR,COMPASS-SVP (Cosine),subj_macro_f1_%,60.99,60.99,match
+AR,SVM (Baseline),win_acc_%,54.59,54.59,match
+AR,SVM (Baseline),trial_acc_%,48.61,48.61,match
+AR,SVM (Baseline),subj_acc_%,44.44,44.44,match
+AR,SVM (Baseline),subj_macro_f1_%,43.75,43.75,match
+AR,Random Forest (Baseline),win_acc_%,50.74,50.74,match
+AR,Random Forest (Baseline),trial_acc_%,46.11,46.11,match
+AR,Random Forest (Baseline),subj_acc_%,44.44,44.44,match
+AR,Random Forest (Baseline),subj_macro_f1_%,43.75,43.75,match
+AR,MLP (Baseline),win_acc_%,55.37,55.37,match
+AR,MLP (Baseline),trial_acc_%,47.5,47.5,match
+AR,MLP (Baseline),subj_acc_%,44.44,44.44,match
+AR,MLP (Baseline),subj_macro_f1_%,43.75,43.75,match
+AR,KNN (Baseline),win_acc_%,56.15,56.15,match
+AR,KNN (Baseline),trial_acc_%,51.11,51.11,match
+AR,KNN (Baseline),subj_acc_%,50.0,44.44,transcription error
+AR,KNN (Baseline),subj_macro_f1_%,49.85,43.75,transcription error
