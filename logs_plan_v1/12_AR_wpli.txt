@@ -1,0 +1,29 @@
+Prototype graphs | Active-Reflective | WPLI | subjects: 18 | K = 2
+  Fold  1/18 done
+  Fold  2/18 done
+  Fold  3/18 done
+  Fold  4/18 done
+  Fold  5/18 done
+  Fold  6/18 done
+  Fold  7/18 done
+  Fold  8/18 done
+  Fold  9/18 done
+  Fold 10/18 done
+  Fold 11/18 done
+  Fold 12/18 done
+  Fold 13/18 done
+  Fold 14/18 done
+  Fold 15/18 done
+  Fold 16/18 done
+  Fold 17/18 done
+  Fold 18/18 done
+
+dimension feature              prototype  n_folds  r_median  r_min  r_max
+       AR    wpli     active prototype 1       18     0.957  0.785  0.984
+       AR    wpli     active prototype 2       18     0.937  0.803  0.978
+       AR    wpli reflective prototype 1       18     0.988  0.768  0.998
+       AR    wpli reflective prototype 2       18     0.971  0.910  0.993
+
+Difference graph: 9 of 28 edges change sign in more than 20% of the folds
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_prototypes/

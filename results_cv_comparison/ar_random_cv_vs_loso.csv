@@ -1,0 +1,7 @@
+model,dimension,loso_win_acc_%,random_cv_win_acc_mean_%,random_cv_win_acc_sd_%,difference_pp
+COMPASS-SVP (Euclidean),AR,52.46,55.29,0.25,2.83
+COMPASS-SVP (Cosine),AR,50.28,47.96,1.59,-2.32
+SVM (Baseline),AR,45.5,79.63,0.2,34.13
+Random Forest (Baseline),AR,41.22,80.59,0.34,39.37
+MLP (Baseline),AR,45.2,85.12,0.25,39.92
+KNN (Baseline),AR,40.69,83.0,0.23,42.31

@@ -1,0 +1,61 @@
+seed,model,random_cv_win_acc_%
+0,COMPASS-SVP (Euclidean),55.06
+0,COMPASS-SVP (Cosine),45.17
+0,SVM (Baseline),80.0
+0,Random Forest (Baseline),80.59
+0,MLP (Baseline),85.24
+0,KNN (Baseline),82.85
+1,COMPASS-SVP (Euclidean),55.61
+1,COMPASS-SVP (Cosine),47.63
+1,SVM (Baseline),79.67
+1,Random Forest (Baseline),80.98
+1,MLP (Baseline),84.78
+1,KNN (Baseline),83.26
+2,COMPASS-SVP (Euclidean),55.22
+2,COMPASS-SVP (Cosine),48.46
+2,SVM (Baseline),79.5
+2,Random Forest (Baseline),80.24
+2,MLP (Baseline),85.19
+2,KNN (Baseline),83.24
+3,COMPASS-SVP (Euclidean),55.48
+3,COMPASS-SVP (Cosine),47.59
+3,SVM (Baseline),79.24
+3,Random Forest (Baseline),81.04
+3,MLP (Baseline),85.02
+3,KNN (Baseline),82.61
+4,COMPASS-SVP (Euclidean),55.46
+4,COMPASS-SVP (Cosine),50.2
+4,SVM (Baseline),79.52
+4,Random Forest (Baseline),80.28
+4,MLP (Baseline),84.91
+4,KNN (Baseline),82.98
+5,COMPASS-SVP (Euclidean),55.35
+5,COMPASS-SVP (Cosine),50.57
+5,SVM (Baseline),79.57
+5,Random Forest (Baseline),80.31
+5,MLP (Baseline),85.04
+5,KNN (Baseline),82.93
+6,COMPASS-SVP (Euclidean),55.35
+6,COMPASS-SVP (Cosine),46.57
+6,SVM (Baseline),79.83
+6,Random Forest (Baseline),80.5
+6,MLP (Baseline),85.72
+6,KNN (Baseline),83.22
+7,COMPASS-SVP (Euclidean),54.93
+7,COMPASS-SVP (Cosine),48.48
+7,SVM (Baseline),79.7
+7,Random Forest (Baseline),80.17
+7,MLP (Baseline),85.06
+7,KNN (Baseline),83.09
+8,COMPASS-SVP (Euclidean),55.54
+8,COMPASS-SVP (Cosine),47.61
+8,SVM (Baseline),79.67
+8,Random Forest (Baseline),80.76
+8,MLP (Baseline),85.02
+8,KNN (Baseline),83.13
+9,COMPASS-SVP (Euclidean),54.94
+9,COMPASS-SVP (Cosine),47.3
+9,SVM (Baseline),79.59
+9,Random Forest (Baseline),80.98
+9,MLP (Baseline),85.22
+9,KNN (Baseline),82.72

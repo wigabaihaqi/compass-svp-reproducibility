@@ -1,0 +1,21 @@
+Prototype graphs | Verbal-Visual | WPLI | subjects: 10 | K = 2
+  Fold  1/10 done
+  Fold  2/10 done
+  Fold  3/10 done
+  Fold  4/10 done
+  Fold  5/10 done
+  Fold  6/10 done
+  Fold  7/10 done
+  Fold  8/10 done
+  Fold  9/10 done
+  Fold 10/10 done
+
+dimension feature          prototype  n_folds  r_median  r_min  r_max
+       VV    wpli verbal prototype 1       10     0.888  0.648  0.969
+       VV    wpli verbal prototype 2       10     0.992  0.867  0.997
+       VV    wpli visual prototype 1       10     0.928  0.764  0.972
+       VV    wpli visual prototype 2       10     0.976  0.749  0.997
+
+Difference graph: 0 of 28 edges change sign in more than 20% of the folds
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_prototypes/

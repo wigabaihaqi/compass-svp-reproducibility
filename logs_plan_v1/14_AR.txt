@@ -1,0 +1,22 @@
+Random CV vs. LOSO | Active-Reflective | 5400 windows, 18 subjects | 5-fold, seeds 0-9
+  seed 0: COMPASS-SVP 55.1%, COMPASS-SVP 45.2%, SVM 80.0%, Random Forest 80.6%, MLP 85.2%, KNN 82.9%
+  seed 1: COMPASS-SVP 55.6%, COMPASS-SVP 47.6%, SVM 79.7%, Random Forest 81.0%, MLP 84.8%, KNN 83.3%
+  seed 2: COMPASS-SVP 55.2%, COMPASS-SVP 48.5%, SVM 79.5%, Random Forest 80.2%, MLP 85.2%, KNN 83.2%
+  seed 3: COMPASS-SVP 55.5%, COMPASS-SVP 47.6%, SVM 79.2%, Random Forest 81.0%, MLP 85.0%, KNN 82.6%
+  seed 4: COMPASS-SVP 55.5%, COMPASS-SVP 50.2%, SVM 79.5%, Random Forest 80.3%, MLP 84.9%, KNN 83.0%
+  seed 5: COMPASS-SVP 55.4%, COMPASS-SVP 50.6%, SVM 79.6%, Random Forest 80.3%, MLP 85.0%, KNN 82.9%
+  seed 6: COMPASS-SVP 55.4%, COMPASS-SVP 46.6%, SVM 79.8%, Random Forest 80.5%, MLP 85.7%, KNN 83.2%
+  seed 7: COMPASS-SVP 54.9%, COMPASS-SVP 48.5%, SVM 79.7%, Random Forest 80.2%, MLP 85.1%, KNN 83.1%
+  seed 8: COMPASS-SVP 55.5%, COMPASS-SVP 47.6%, SVM 79.7%, Random Forest 80.8%, MLP 85.0%, KNN 83.1%
+  seed 9: COMPASS-SVP 54.9%, COMPASS-SVP 47.3%, SVM 79.6%, Random Forest 81.0%, MLP 85.2%, KNN 82.7%
+
+                         dimension  loso_win_acc_%  random_cv_win_acc_mean_%  random_cv_win_acc_sd_%  difference_pp
+model                                                                                                              
+COMPASS-SVP (Euclidean)         AR           52.46                     55.29                    0.25           2.83
+COMPASS-SVP (Cosine)            AR           50.28                     47.96                    1.59          -2.32
+SVM (Baseline)                  AR           45.50                     79.63                    0.20          34.13
+Random Forest (Baseline)        AR           41.22                     80.59                    0.34          39.37
+MLP (Baseline)                  AR           45.20                     85.12                    0.25          39.92
+KNN (Baseline)                  AR           40.69                     83.00                    0.23          42.31
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_cv_comparison/

@@ -1,0 +1,5 @@
+dimension,feature,prototype,n_folds,r_median,r_min,r_max
+AR,plv,active prototype 1,18,0.971,0.069,0.993
+AR,plv,active prototype 2,18,0.907,-0.038,0.973
+AR,plv,reflective prototype 1,18,0.981,0.927,0.997
+AR,plv,reflective prototype 2,18,0.978,0.746,0.995

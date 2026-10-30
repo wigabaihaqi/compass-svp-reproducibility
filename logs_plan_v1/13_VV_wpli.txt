@@ -1,0 +1,21 @@
+Edge statistics | Verbal-Visual | WPLI (raw) | verbal n = 5, visual n = 5 | edges: 28
+Exact permutation test over 252 label assignments
+
+  edge  mean_verbal  mean_visual  difference_class1_minus_class0  welch_t  hedges_g  g_ci95_low  g_ci95_high  p_permutation_raw  p_fwer_maxT  q_fdr_bh  significant_fwer  significant_fdr  prototype_difference_sign  sign_agrees_with_prototypes
+Fp1-C4       0.6332       0.3141                         -0.3191   -3.117    -1.780      -3.245       -0.316             0.0079       0.2937    0.2222             False            False                          1                        False
+Fp1-O2       0.7333       0.4337                         -0.2995   -2.999    -1.713      -3.162       -0.264             0.0159       0.3175    0.2222             False            False                          1                        False
+ F4-C4       0.6704       0.3609                         -0.3096   -2.497    -1.426      -2.815       -0.038             0.0397       0.4841    0.2667             False            False                          1                        False
+ F3-C4       0.6680       0.3967                         -0.2713   -2.284    -1.305      -2.670        0.060             0.0397       0.5714    0.2667             False            False                          1                        False
+Fp1-F4       0.8414       0.5122                         -0.3292   -2.388    -1.364      -2.740        0.012             0.0476       0.5397    0.2667             False            False                          1                        False
+Fp1-O1       0.7637       0.5015                         -0.2621   -2.058    -1.176      -2.518        0.167             0.1111       0.6905    0.4444             False            False                          1                        False
+ C4-O1       0.5516       0.2847                         -0.2670   -1.919    -1.096      -2.425        0.233             0.1111       0.7619    0.4444             False            False                          1                        False
+Fp2-F4       0.8720       0.6588                         -0.2132   -1.822    -1.041      -2.362        0.280             0.1270       0.8175    0.4444             False            False                          1                        False
+Fp1-F3       0.6920       0.4948                         -0.1972   -1.448    -0.827      -2.119        0.464             0.1905       0.9444    0.5455             False            False                          1                        False
+Fp1-C3       0.7619       0.5930                         -0.1689   -1.376    -0.786      -2.072        0.501             0.1984       0.9524    0.5455             False            False                          1                        False
+
+dimension feature  n_class0  n_class1  n_permutations  edges  min_p_raw  edges_p_raw_lt_0.05  edges_significant_fwer  edges_significant_fdr  max_abs_g sign_agreement_with_prototypes
+       VV    wpli         5         5             252     28     0.0079                    5                       0                      0       1.78                           6/28
+
+No edge survives the max-|t| correction (FWER 0.05); no figure is drawn.
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_edges/

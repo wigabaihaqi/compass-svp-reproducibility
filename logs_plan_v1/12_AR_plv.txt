@@ -1,0 +1,29 @@
+Prototype graphs | Active-Reflective | PLV | subjects: 18 | K = 2
+  Fold  1/18 done
+  Fold  2/18 done
+  Fold  3/18 done
+  Fold  4/18 done
+  Fold  5/18 done
+  Fold  6/18 done
+  Fold  7/18 done
+  Fold  8/18 done
+  Fold  9/18 done
+  Fold 10/18 done
+  Fold 11/18 done
+  Fold 12/18 done
+  Fold 13/18 done
+  Fold 14/18 done
+  Fold 15/18 done
+  Fold 16/18 done
+  Fold 17/18 done
+  Fold 18/18 done
+
+dimension feature              prototype  n_folds  r_median  r_min  r_max
+       AR     plv     active prototype 1       18     0.971  0.069  0.993
+       AR     plv     active prototype 2       18     0.907 -0.038  0.973
+       AR     plv reflective prototype 1       18     0.981  0.927  0.997
+       AR     plv reflective prototype 2       18     0.978  0.746  0.995
+
+Difference graph: 8 of 28 edges change sign in more than 20% of the folds
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_prototypes/

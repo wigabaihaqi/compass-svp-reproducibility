@@ -1,0 +1,2 @@
+dimension,feature,n_class0,n_class1,n_permutations,edges,min_p_raw,edges_p_raw_lt_0.05,edges_significant_fwer,edges_significant_fdr,max_abs_g,sign_agreement_with_prototypes
+AR,plv,9,9,48620,28,0.0193,4,0,0,1.178,6/28
