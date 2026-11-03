@@ -4,9 +4,11 @@ Presentation only: reads the prototype edge values written by 12_prototype_graph
 (results_prototypes/<dim>_<feature>_prototype_edges.csv) and redraws them on a
 top view of a glass brain. No model is fitted and no number changes.
 
-Electrode positions are the cortical projections of the 10-20 positions in MNI
-space reported by Okamoto et al. (2004), NeuroImage 21, 99-111. They are an
-approximate projection of scalp electrodes; the connectivity is sensor-level.
+Electrode positions are the mean cortical projections in MNI space of the
+electrodes, as reported in Table 1 of Scrivener and Reader (2022), Brain and
+Behavior 12, e2476, doi:10.1002/brb3.2476 (20 participants, open access). They
+are an approximate projection of scalp electrodes; the connectivity is
+sensor-level.
 
 Usage: python scripts/15_prototype_glassbrain.py --dimension VV --feature plv
 Requires nilearn (pip install nilearn).
@@ -30,9 +32,9 @@ parser.add_argument('--results-dir', default=os.environ.get(
 args = parser.parse_args()
 
 SIGN_FLAG = 0.80   # same rule as script 12: dashed when the sign agrees in < 80% of folds
-MNI = {'Fp1': (-21.5, 70.2, -0.1), 'Fp2': (28.4, 69.1, -0.4), 'F3': (-35.5, 49.4, 32.4),
-       'F4': (40.2, 47.6, 32.1), 'C3': (-52.2, -16.4, 57.8), 'C4': (54.1, -18.0, 57.5),
-       'O1': (-26.8, -100.2, 12.8), 'O2': (24.1, -100.5, 14.1)}
+MNI = {'Fp1': (-24.54, 66.41, 11.97), 'Fp2': (25.25, 66.62, 12.19), 'F3': (-38.23, 34.47, 46.92),
+       'F4': (38.59, 34.99, 48.23), 'C3': (-50.88, -21.18, 59.95), 'C4': (50.78, -23.18, 63.58),
+       'O1': (-27.11, -99.78, 6.68), 'O2': (22.51, -100.07, 8.94)}   # cortex columns of Table 1
 
 tag, feat = args.dimension.lower(), args.feature
 in_dir = os.path.join(args.results_dir, 'results_prototypes')
