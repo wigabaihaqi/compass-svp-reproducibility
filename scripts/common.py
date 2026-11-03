@@ -55,7 +55,10 @@ K_PROTOTYPES = 2            # macro-anchors per class (fixed for all folds; see 
 KMEANS_N_INIT = 10          # K-Means restarts; a single start ('auto') makes the prototypes depend on row order
 WINDOWS_PER_TRIAL = 15      # 15 x 1-s windows per 15-s trial (odd -> no window-to-trial ties)
 TRIALS_PER_SUBJECT = 20     # 10 RAPM questions x 2 phases
-TIE_CLASS = 1               # any tied vote (e.g., 10-10 trials) is resolved to Class 1
+TIE_CLASS = 1               # fallback only: a tie that the symmetric rule below cannot break goes to Class 1
+# Subject-level ties (10 vs 10 trials) are broken symmetrically by the majority over all windows of the
+# subject (300 windows; a 150-150 window tie falls back to TIE_CLASS and is counted in 'tie_flat').
+# Amendment 1 (2026-11-03) of analysis_plan/analysis_plan_v1.md; before it, every tie went to Class 1.
 
 CLASS_NAMES = {'VV': ('verbal', 'visual'), 'AR': ('active', 'reflective')}
 LABEL_TO_INDEX = {          # accepted label spellings (English and Indonesian)
@@ -157,8 +160,18 @@ def majority_vote(preds, tie_class=TIE_CLASS):
     return 1 if n1 > n0 else 0
 
 
+def subject_vote(trial_preds, window_preds):
+    """Subject decision from its trial decisions; a tied trial vote is broken by the window majority."""
+    trial_preds = np.asarray(trial_preds)
+    if int((trial_preds == 1).sum()) * 2 == len(trial_preds):
+        return majority_vote(window_preds)
+    return majority_vote(trial_preds)
+
+
 def aggregate(units):
     """Hierarchical (unit -> trial -> subject) and flat (unit -> subject) voting.
+
+    A subject whose trial vote is tied takes the flat (all-unit) majority (see TIE_CLASS).
 
     `units` must contain the columns subject, trial, y, y_pred, where a unit is a
     window (or a MIL instance). Returns (trials_df, subjects_df).
@@ -179,8 +192,15 @@ def aggregate(units):
                 .reset_index())
     flat = (units.groupby('subject', sort=False)
             .agg(pred_subject_flat=('y_pred', majority_vote)).reset_index())
-    subjects = subjects.merge(flat, on='subject')
+    flat_tie = (units.groupby('subject', sort=False)['y_pred']
+                .agg(lambda p: int((np.asarray(p) == 1).sum()) * 2 == len(p)).rename('tie_flat').reset_index())
+    subjects = subjects.merge(flat, on='subject').merge(flat_tie, on='subject')
     subjects['tie'] = subjects['trials_class1'] * 2 == subjects['n_trials']
+    # trial-vote decision with every tie sent to Class 1 (rule before Amendment 1; kept for sensitivity)
+    subjects['pred_subject_class1_tie'] = subjects['pred_subject']
+    # symmetric rule: a tied trial vote is broken by the majority over all windows of the subject
+    subjects['pred_subject'] = np.where(subjects['tie'], subjects['pred_subject_flat'],
+                                        subjects['pred_subject']).astype(int)
     subjects['correct'] = subjects['pred_subject'] == subjects['true_class']
     subjects = subjects.sort_values('subject', key=lambda c: c.map(subject_sort_key)).reset_index(drop=True)
     return trials, subjects
@@ -214,6 +234,7 @@ def summarize(units, trials, subjects, unit_name='Win'):
         'Subj Acc Flat Vote (%)': round(accuracy_score(yt, subjects['pred_subject_flat']) * 100, 2),
         'TN': int(cm[0, 0]), 'FP': int(cm[0, 1]), 'FN': int(cm[1, 0]), 'TP': int(cm[1, 1]),
         'Subject Ties': int(subjects['tie'].sum()),
+        'Subj Acc Class1 Tie (%)': round(accuracy_score(yt, subjects['pred_subject_class1_tie']) * 100, 2),
     }
 
 

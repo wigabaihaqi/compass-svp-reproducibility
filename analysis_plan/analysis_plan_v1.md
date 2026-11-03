@@ -115,4 +115,23 @@ Each prototype is a vector of 28 channel-pair values, so it can be drawn directl
 
 ## Amendments
 
-None.
+### Amendment 1 (3 November 2026): symmetric subject-level tie rule
+
+- **Change:** a subject whose trial vote is tied (10 vs. 10 trials) is assigned by the majority over all 300
+  windows of that subject, for every model. Before this amendment, every tie was assigned to Class 1 (Visual or
+  Reflective). A 150 vs. 150 window tie, which did not occur, would still fall back to Class 1.
+- **Reason:** the Class-1 rule favours one class: a tied Class-1 subject is always counted as correct and a tied
+  Class-0 subject always as wrong.
+- **Timing:** decided on 3 November 2026, after the results of the main benchmark and of Analyses 1-3 had been
+  seen. This departs from the out-of-scope item "choosing a tie rule after seeing results" and is therefore reported
+  as a post-hoc change in the manuscript.
+- **Reporting:**
+  - all subject-level results use the new rule;
+  - results under the Class-1 rule are reported as a sensitivity analysis (column `Subj Acc Class1 Tie (%)` and
+    `pred_subject_class1_tie`);
+  - for COMPASS-SVP, a second sensitivity analysis assigns a tied subject to the class whose nearest prototypes are
+    closer on average over its windows (`results_compass/<dim>_compass_tie_rule_sensitivity.csv`);
+  - the change is added as a separate stage (C) to the reconstruction in `reconciliation/`.
+- **Not affected:** window- and trial-level results, and Analyses 1-3, which do not use subject-level votes.
+- **Implementation:** `scripts/common.py` (`aggregate`, `subject_vote`), `scripts/10_label_permutation.py`,
+  `scripts/05_compass_svp_benchmark.py`, `scripts/11_reconciliation.py`; rerun with `run_amendment1.sh`.

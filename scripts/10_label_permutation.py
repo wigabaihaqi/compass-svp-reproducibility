@@ -3,7 +3,7 @@ Step 10 - Subject-level label-permutation test of COMPASS-SVP against chance (Se
 
 The class labels are permuted across subjects (the number of subjects per class is kept), and the
 complete COMPASS-SVP pipeline (SVM sifting, K-Means condensation, nearest-prototype inference and
-hierarchical voting) is retrained in every LOSO fold for each permutation. The p-value is the share
+hierarchical voting, with the symmetric subject tie rule of common.py) is retrained in every LOSO fold for each permutation. The p-value is the share
 of permutations whose subject-level accuracy is at least the observed one (Ojala and Garriga, 2010).
 
 All balanced label assignments are enumerated when --n-perm is 0 or not smaller than their number
@@ -65,7 +65,7 @@ def loso_accuracy(labels):
         for metric in METRICS:
             pred = proto_labels[np.argmin(cdist(X[te], protos, metric=metric), axis=1)]
             trial_votes = pd.Series(pred).groupby(trial[te]).apply(C.majority_vote)
-            correct[metric] += int(C.majority_vote(trial_votes.values) == labels[s])
+            correct[metric] += int(C.subject_vote(trial_votes.values, pred) == labels[s])
     return {m: correct[m] / len(subjects) for m in METRICS}
 
 

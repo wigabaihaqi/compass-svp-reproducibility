@@ -226,7 +226,7 @@ os.environ['COMPASS_RESULTS_DIR'] = '/content/drive/MyDrive/<your-folder>'
 | Validation | strict Leave-One-Subject-Out; the held-out subject is never used for training or for choosing K |
 | Normalization | subject-wise z-score of each feature (each channel for the LSTM-CNN) using only that subject's own unlabeled data; applied identically to training and held-out subjects |
 | Random seed | 42 (LSTM-CNN: 42 + fold index) |
-| Voting | window -> trial (15 windows, odd, so no ties) -> subject (20 trials); a tied vote is resolved to Class 1 (Visual / Reflective) |
+| Voting | window -> trial (15 windows, odd, so no ties) -> subject (20 trials); a tied subject vote (10 vs 10 trials) is broken by the majority over all windows of the subject (Amendment 1 of `analysis_plan/analysis_plan_v1.md`; earlier results resolved ties to Class 1) |
 | Number of prototypes | K = 2 per class, fixed for all folds (Section 3.2) |
 | K-Means initialization | k-means++ with 10 restarts (`n_init=10`, `random_state=42`); results are invariant to the row order of the data |
 | Distance metrics | Euclidean and Cosine are both reported as separate, complete pipelines |

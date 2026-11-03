@@ -8,12 +8,15 @@ Traces every Table 2 result through the documented changes, without retraining a
       = commit c482849 predictions with tied AR subject votes (10 vs 10 trials) resolved to Active,
         as in the original AR notebook (VV notebook and revised code: ties -> Class 1)
   A   revised code, original AR input data (commit c482849)
-  B   revised code, corrected AR input file of subject 8 (current results_compass/)
+  B   revised code, corrected AR input file of subject 8, subject ties -> Class 1 (commit 6cdb397)
+  C   as B, with the symmetric subject tie rule of Amendment 1 (ties broken by the majority over all
+      windows of the subject; current results_compass/)
 
   v1 -> A0 : K-Means n_init 'auto' (one initialization) -> 10; software environment (only the
              stochastic baselines RF and MLP are affected; SVM and KNN are identical at window level)
   A0 -> A  : AR subject-level tie rule unified with VV (ties -> Class 1); VV unaffected
   A  -> B  : AR input file of subject 8 corrected; VV data identical in all states
+  B  -> C  : subject-level tie rule made symmetric (both dimensions); window and trial levels unchanged
 
 Usage:  python scripts/11_reconciliation.py
 Needs:  git (to read commit c482849) and the archived notebooks in reconciliation/v1_notebooks/
@@ -40,6 +43,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REC = os.path.join(REPO, 'reconciliation')
 NB_DIR = os.path.join(REC, 'v1_notebooks')
 COMMIT_A = 'c482849'
+COMMIT_B = '6cdb397'   # last commit with the Class-1 subject tie rule
 
 DIMS = {'VV': ('verbal', 'visual'), 'AR': ('active', 'reflective')}
 # model key -> (name in the v1 notebook output per dimension, file stem in results_compass/)
@@ -65,9 +69,10 @@ TABLE2_V1 = {
     ('AR', 'MLP (Baseline)'):          (55.37, 47.50, 44.44, 43.75),
     ('AR', 'Random Forest (Baseline)'): (50.74, 46.11, 44.44, 43.75),
 }
-STAGES = ['v1', 'A0', 'A', 'B']
+STAGES = ['v1', 'A0', 'A', 'B', 'C']
 TRANSITIONS = [('v1->A0 (n_init; software)', 'v1', 'A0'), ('A0->A (AR subject tie rule)', 'A0', 'A'),
-               ('A->B (AR subject-8 data)', 'A', 'B'), ('v1->B (total)', 'v1', 'B')]
+               ('A->B (AR subject-8 data)', 'A', 'B'), ('B->C (symmetric subject tie rule)', 'B', 'C'),
+               ('v1->C (total)', 'v1', 'C')]
 
 
 # ---------------------------------------------------------------- readers
@@ -105,13 +110,15 @@ def v1_summary(text, nb_name):
     raise RuntimeError(f'{nb_name} not in summary table')
 
 
-def git_csv(path):
-    out = subprocess.check_output(['git', '-C', REPO, 'show', f'{COMMIT_A}:{path}'])
+def git_csv(path, commit=COMMIT_A):
+    out = subprocess.check_output(['git', '-C', REPO, 'show', f'{commit}:{path}'])
     return pd.read_csv(io.BytesIO(out))
 
 
 def results_csv(stage, path):
-    return git_csv(path) if stage == 'A' else pd.read_csv(os.path.join(REPO, path))
+    if stage in ('A', 'B'):
+        return git_csv(path, COMMIT_A if stage == 'A' else COMMIT_B)
+    return pd.read_csv(os.path.join(REPO, path))
 
 
 def repo_summary(stage, dim, model):
@@ -141,14 +148,14 @@ for dim, names in DIMS.items():
     diff_rows = []
     for model, (nb_names, stem) in MODELS.items():
         preds = {'v1': v1_subjects(text, nb_names[dim], dim)}
-        for st in ('A', 'B'):
+        for st in ('A', 'B', 'C'):
             preds[st] = results_csv(st, f'results_compass/{dim.lower()}_{stem}_subject_predictions.csv')
         preds['A0'] = preds['A'].copy()
         if dim == 'AR':   # original AR notebook: active_trials >= reflective_trials -> Active
             preds['A0']['pred_subject'] = (preds['A0']['trials_class1'] * 2 > preds['A0']['n_trials']).astype(int)
-        n = len(preds['B'])
+        n = len(preds['C'])
         for st in STAGES:
-            assert len(preds[st]) == n and (preds[st]['true_class'].values == preds['B']['true_class'].values).all(), \
+            assert len(preds[st]) == n and (preds[st]['true_class'].values == preds['C']['true_class'].values).all(), \
                 f'subject order/labels differ: {dim} {model} {st}'
 
         # metrics per state
@@ -171,9 +178,9 @@ for dim, names in DIMS.items():
         # subject-by-subject diffs
         ok = {st: (preds[st]['pred_subject'] == preds[st]['true_class']).values for st in STAGES}
         for i in range(n):
-            changed = [lab.split(' ')[0] for lab, a, b in TRANSITIONS[:3] if ok[a][i] != ok[b][i]]
-            row = {'model': model, 'subject': int(preds['B']['subject'][i]),
-                   'true_class': names[int(preds['B']['true_class'][i])]}
+            changed = [lab.split(' ')[0] for lab, a, b in TRANSITIONS[:4] if ok[a][i] != ok[b][i]]
+            row = {'model': model, 'subject': int(preds['C']['subject'][i]),
+                   'true_class': names[int(preds['C']['true_class'][i])]}
             for st in STAGES:
                 row[f'{st}_pred'] = names[int(preds[st]['pred_subject'][i])]
                 row[f'{st}_trials_class1_of_20'] = int(preds[st]['trials_class1'][i])
@@ -189,8 +196,8 @@ for dim, names in DIMS.items():
                                     'correct_before': int(ok[a].sum()), 'correct_after': int(ok[b].sum()),
                                     'both_correct': int((ok[a] & ok[b]).sum()), 'only_before_correct': bc,
                                     'only_after_correct': cb, 'both_wrong': int((~ok[a] & ~ok[b]).sum()),
-                                    'subjects_lost': ' '.join(str(s) for s in preds['B']['subject'][ok[a] & ~ok[b]]) or '-',
-                                    'subjects_gained': ' '.join(str(s) for s in preds['B']['subject'][~ok[a] & ok[b]]) or '-',
+                                    'subjects_lost': ' '.join(str(s) for s in preds['C']['subject'][ok[a] & ~ok[b]]) or '-',
+                                    'subjects_gained': ' '.join(str(s) for s in preds['C']['subject'][~ok[a] & ok[b]]) or '-',
                                     'p_mcnemar_exact': round(mcnemar_exact(bc, cb), 4)})
     pd.DataFrame(diff_rows).to_csv(os.path.join(REC, f'subject_diffs_{dim.lower()}.csv'), index=False)
 

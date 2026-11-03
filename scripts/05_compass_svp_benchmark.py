@@ -91,8 +91,11 @@ for fold, test_subj in enumerate(subjects, start=1):
         proto_labels.append(np.full(len(km.cluster_centers_), c))
     protos, proto_labels = np.vstack(protos), np.concatenate(proto_labels)
     for name, metric in COMPASS.items():   # stage 3: nearest-prototype inference
-        pred = proto_labels[np.argmin(cdist(X_te, protos, metric=metric), axis=1)]
-        window_preds[name].append(base.assign(y_pred=pred, fold=fold))
+        dist = cdist(X_te, protos, metric=metric)
+        pred = proto_labels[np.argmin(dist, axis=1)]
+        window_preds[name].append(base.assign(y_pred=pred, fold=fold,
+                                              d_class0=dist[:, proto_labels == 0].min(axis=1),
+                                              d_class1=dist[:, proto_labels == 1].min(axis=1)))
 
     window_preds['SVM (Baseline)'].append(base.assign(y_pred=svm.predict(X_te), fold=fold))
     for name, factory in BASELINES.items():
@@ -116,6 +119,24 @@ for name in names:
     subject_preds[name] = subj[['subject', 'true_class', 'pred_subject']]
     C.print_subject_report(name, dim, subj, summary[name])
     C.export_predictions(out_dir, f'{tag}_{C.safe_name(name)}', units, trials, subj)
+
+# sensitivity (COMPASS-SVP only): a tied subject is assigned to the class whose nearest prototypes are
+# closer on average over its windows (mean of d_class0 - d_class1 > 0 -> Class 1)
+tb_rows = []
+for name in COMPASS:
+    units = pd.concat(window_preds[name], ignore_index=True)
+    _, subj = C.aggregate(units)
+    margin = (units['d_class0'] - units['d_class1']).groupby(units['subject']).mean()
+    by_dist = np.where(subj['tie'], (subj['subject'].map(margin) > 0).astype(int), subj['pred_subject'])
+    yt = subj['true_class'].values
+    tb_rows.append({'model': name, 'n_subjects': len(subj), 'subject_ties': int(subj['tie'].sum()),
+                    'tied_subjects': ' '.join(str(s) for s in subj.loc[subj['tie'], 'subject']) or '-',
+                    'correct_window_majority (main)': int((subj['pred_subject'].values == yt).sum()),
+                    'correct_mean_distance': int((by_dist == yt).sum()),
+                    'correct_class1_tie (old rule)': int((subj['pred_subject_class1_tie'].values == yt).sum())})
+tb = pd.DataFrame(tb_rows)
+print("\nTie-rule sensitivity (COMPASS-SVP):\n" + tb.to_string(index=False))
+tb.to_csv(os.path.join(out_dir, f'{tag}_compass_tie_rule_sensitivity.csv'), index=False)
 
 res = pd.DataFrame(summary).T
 print("\n" + "=" * 120 + f"\n BENCHMARK SUMMARY ({dim})\n" + "=" * 120)
