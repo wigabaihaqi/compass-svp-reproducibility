@@ -1,0 +1,48 @@
+COMPASS-SVP ablation | Active-Reflective | feature: WPLI | subjects: 18
+  Fold  1/18 | held-out subject 1 | support vectors: 3338
+  Fold  2/18 | held-out subject 2 | support vectors: 3331
+  Fold  3/18 | held-out subject 3 | support vectors: 3339
+  Fold  4/18 | held-out subject 4 | support vectors: 3298
+  Fold  5/18 | held-out subject 5 | support vectors: 3303
+  Fold  6/18 | held-out subject 6 | support vectors: 3339
+  Fold  7/18 | held-out subject 7 | support vectors: 3373
+  Fold  8/18 | held-out subject 8 | support vectors: 2906
+  Fold  9/18 | held-out subject 9 | support vectors: 3298
+  Fold 10/18 | held-out subject 10 | support vectors: 3229
+  Fold 11/18 | held-out subject 11 | support vectors: 3162
+  Fold 12/18 | held-out subject 12 | support vectors: 3468
+  Fold 13/18 | held-out subject 13 | support vectors: 3143
+  Fold 14/18 | held-out subject 14 | support vectors: 3166
+  Fold 15/18 | held-out subject 15 | support vectors: 3180
+  Fold 16/18 | held-out subject 16 | support vectors: 3466
+  Fold 17/18 | held-out subject 17 | support vectors: 3125
+  Fold 18/18 | held-out subject 18 | support vectors: 3466
+
+============================================================================================================================================
+ ABLATION RESULTS (AR, WPLI)
+============================================================================================================================================
+                                               Win Acc (%) Trial Acc (%) Subj Acc (%) Subj Acc Flat Vote (%) Subj Correct    95% CI (%) Subj Macro Prec (%) Subj Macro Rec (%) Subj Macro F1 (%) Subject Ties
+Full System - Euclidean                              54.44         54.44        55.56                  55.56        10/18  [30.8, 78.5]               76.47              55.56             44.62            3
+Full System - Cosine                                 45.59          45.0        55.56                  55.56        10/18  [30.8, 78.5]               55.84              55.56              55.0            1
+Scenario A (w/o K-Means) - Euclidean                 53.89         52.22        55.56                  55.56        10/18  [30.8, 78.5]               56.92              55.56             53.25            1
+Scenario A (w/o K-Means) - Cosine                    50.52         41.94        16.67                  27.78         3/18   [3.6, 41.4]               16.25              16.67             16.41            2
+Scenario B (w/o SVM Sifting) - Euclidean             52.28         50.28        44.44                  44.44         8/18  [21.5, 69.2]               44.16              44.44             43.75            1
+Scenario B (w/o SVM Sifting) - Cosine                47.15         41.67        44.44                   50.0         8/18  [21.5, 69.2]               43.08              44.44             41.56            1
+Scenario C (Single Prototype, K=1) - Euclidean       57.04         58.06        61.11                  66.67        11/18  [35.7, 82.7]                62.5              61.11              60.0            4
+Scenario C (Single Prototype, K=1) - Cosine          45.87         46.67        33.33                  44.44         6/18  [13.3, 59.0]               32.47              33.33              32.5            3
+SVM (Baseline)                                        47.5         46.39        44.44                  44.44         8/18  [21.5, 69.2]               44.16              44.44             43.75            1
+
+============================================================================================================================================
+ FULL SYSTEM vs. ABLATED VARIANTS (paired, subject level)
+============================================================================================================================================
+                model_A                                        model_B  only_A_correct (b)  only_B_correct (c)  delta_acc_pp  p_mcnemar_exact  p_mcnemar_holm
+Full System - Euclidean           Scenario A (w/o K-Means) - Euclidean                   6                   6          0.00           1.0000          1.0000
+Full System - Euclidean       Scenario B (w/o SVM Sifting) - Euclidean                   5                   3         11.11           0.7266          1.0000
+Full System - Euclidean Scenario C (Single Prototype, K=1) - Euclidean                   3                   4         -5.56           1.0000          1.0000
+Full System - Euclidean                                 SVM (Baseline)                   6                   4         11.11           0.7539          1.0000
+   Full System - Cosine              Scenario A (w/o K-Means) - Cosine                   9                   2         38.89           0.0654          0.2616
+   Full System - Cosine          Scenario B (w/o SVM Sifting) - Cosine                   4                   2         11.11           0.6875          1.0000
+   Full System - Cosine    Scenario C (Single Prototype, K=1) - Cosine                   4                   0         22.22           0.1250          0.3750
+   Full System - Cosine                                 SVM (Baseline)                   5                   3         11.11           0.7266          1.0000
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_ablation/

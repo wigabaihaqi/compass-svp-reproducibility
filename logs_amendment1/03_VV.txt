@@ -1,0 +1,27 @@
+MIL-RF [11] | Verbal-Visual | instance = pair | bag = trial | RF {'n_estimators': 10, 'max_depth': 16}
+  Fold  1/10 | held-out subject 1
+  Fold  2/10 | held-out subject 2
+  Fold  3/10 | held-out subject 3
+  Fold  4/10 | held-out subject 4
+  Fold  5/10 | held-out subject 5
+  Fold  6/10 | held-out subject 6
+  Fold  7/10 | held-out subject 7
+  Fold  8/10 | held-out subject 8
+  Fold  9/10 | held-out subject 9
+  Fold 10/10 | held-out subject 10
+
+--- MIL-RF [11] | subject level ---
+  Subject    1 | true: verbal     | pred: visual     | trials voting visual: 19/20 | WRONG
+  Subject    2 | true: verbal     | pred: visual     | trials voting visual: 20/20 | WRONG
+  Subject    3 | true: verbal     | pred: visual     | trials voting visual: 18/20 | WRONG
+  Subject    4 | true: verbal     | pred: visual     | trials voting visual: 20/20 | WRONG
+  Subject    5 | true: verbal     | pred: visual     | trials voting visual: 20/20 | WRONG
+  Subject    6 | true: visual     | pred: verbal     | trials voting visual: 5/20 | WRONG
+  Subject    7 | true: visual     | pred: verbal     | trials voting visual: 0/20 | WRONG
+  Subject    8 | true: visual     | pred: verbal     | trials voting visual: 0/20 | WRONG
+  Subject    9 | true: visual     | pred: verbal     | trials voting visual: 9/20 | WRONG
+  Subject   10 | true: visual     | pred: verbal     | trials voting visual: 7/20 | WRONG
+  Accuracy 0.00% (0/10), 95% CI [0.0, 30.8] | Macro P/R/F1 0.00/0.00/0.00 | CM [[0 5] [5 0]]
+  Tied trials (instance vote): 5
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_mil_rf/

@@ -1,0 +1,19 @@
+Label-permutation test | Active-Reflective | PLV | observed: euclidean 33.33%, cosine 50.00%
+Random permutations: 300 label assignments
+  25/300
+  50/300
+  75/300
+  100/300
+  125/300
+  150/300
+  175/300
+  200/300
+  225/300
+  250/300
+  275/300
+  300/300
+dimension feature    metric   test  n_permutations  observed_subj_acc_%  null_mean_%  null_95th_percentile_%  n_null_at_least_observed  p_permutation
+       AR     plv euclidean random             300                33.33        48.94                   66.67                       285         0.9502
+       AR     plv    cosine random             300                50.00        49.43                   66.67                       175         0.5847
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_compass/

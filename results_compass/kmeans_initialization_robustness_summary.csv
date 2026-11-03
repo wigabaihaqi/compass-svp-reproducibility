@@ -1,9 +1,9 @@
 dimension,n_init,metric,mean,sd,min,max,n_seeds
-AR,10,cosine,43.61,2.03,38.89,44.44,20
-AR,10,euclidean,28.61,2.03,27.78,33.33,20
-AR,auto,cosine,46.11,7.67,33.33,61.11,20
-AR,auto,euclidean,42.78,10.68,27.78,72.22,20
+AR,10,cosine,50.56,1.71,50.0,55.56,20
+AR,10,euclidean,34.16,2.04,33.33,38.89,20
+AR,auto,cosine,46.39,7.27,38.89,61.11,20
+AR,auto,euclidean,41.39,9.62,27.78,61.11,20
 VV,10,cosine,40.0,0.0,40.0,40.0,20
-VV,10,euclidean,76.0,5.98,60.0,80.0,20
-VV,auto,cosine,41.0,11.19,20.0,60.0,20
+VV,10,euclidean,77.5,5.5,60.0,80.0,20
+VV,auto,cosine,37.0,8.65,20.0,50.0,20
 VV,auto,euclidean,58.0,19.08,30.0,90.0,20

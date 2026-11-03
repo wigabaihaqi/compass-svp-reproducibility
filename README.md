@@ -145,6 +145,12 @@ pip install -r requirements.txt
 The versions in `requirements.txt` are those of the final run (Google Colab, Python 3.13.16).
 TensorFlow is only needed for `04_sota_lstm_cnn.py`.
 
+The rerun for Amendment 1 of `analysis_plan/analysis_plan_v1.md` (steps 02, 03, 05, 06, 08-11) was made on
+macOS with the same package versions (see `logs_amendment1/versions.txt`). Random-forest results (the Random
+Forest baseline, Random Forest + ANOVA and MIL-RF) can differ slightly between platforms despite fixed seeds,
+because of floating-point differences in tree construction; all other models gave identical window- and
+trial-level results on both platforms. Results of steps 04 and 12-14 are from the earlier Colab run.
+
 ## Running
 
 ### From the released features (steps 01-09)

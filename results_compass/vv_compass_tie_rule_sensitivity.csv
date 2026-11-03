@@ -1,0 +1,3 @@
+model,n_subjects,subject_ties,tied_subjects,correct_window_majority (main),correct_mean_distance,correct_class1_tie (old rule)
+COMPASS-SVP (Euclidean),10,1,10,8,7,8
+COMPASS-SVP (Cosine),10,1,5,4,4,4

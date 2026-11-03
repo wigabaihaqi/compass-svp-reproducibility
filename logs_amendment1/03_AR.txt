@@ -1,0 +1,43 @@
+MIL-RF [11] | Active-Reflective | instance = pair | bag = trial | RF {'n_estimators': 10, 'max_depth': 16}
+  Fold  1/18 | held-out subject 1
+  Fold  2/18 | held-out subject 2
+  Fold  3/18 | held-out subject 3
+  Fold  4/18 | held-out subject 4
+  Fold  5/18 | held-out subject 5
+  Fold  6/18 | held-out subject 6
+  Fold  7/18 | held-out subject 7
+  Fold  8/18 | held-out subject 8
+  Fold  9/18 | held-out subject 9
+  Fold 10/18 | held-out subject 10
+  Fold 11/18 | held-out subject 11
+  Fold 12/18 | held-out subject 12
+  Fold 13/18 | held-out subject 13
+  Fold 14/18 | held-out subject 14
+  Fold 15/18 | held-out subject 15
+  Fold 16/18 | held-out subject 16
+  Fold 17/18 | held-out subject 17
+  Fold 18/18 | held-out subject 18
+
+--- MIL-RF [11] | subject level ---
+  Subject    1 | true: active     | pred: active     | trials voting reflective: 5/20 | CORRECT
+  Subject    2 | true: active     | pred: active     | trials voting reflective: 6/20 | CORRECT
+  Subject    3 | true: active     | pred: active     | trials voting reflective: 9/20 | CORRECT
+  Subject    4 | true: active     | pred: active     | trials voting reflective: 5/20 | CORRECT
+  Subject    5 | true: active     | pred: active     | trials voting reflective: 5/20 | CORRECT
+  Subject    6 | true: active     | pred: active     | trials voting reflective: 4/20 | CORRECT
+  Subject    7 | true: active     | pred: reflective | trials voting reflective: 11/20 | WRONG
+  Subject    8 | true: active     | pred: reflective | trials voting reflective: 20/20 | WRONG
+  Subject    9 | true: active     | pred: active     | trials voting reflective: 5/20 | CORRECT
+  Subject   10 | true: reflective | pred: active     | trials voting reflective: 0/20 | WRONG
+  Subject   11 | true: reflective | pred: active     | trials voting reflective: 1/20 | WRONG
+  Subject   12 | true: reflective | pred: reflective | trials voting reflective: 20/20 | CORRECT
+  Subject   13 | true: reflective | pred: active     | trials voting reflective: 0/20 | WRONG
+  Subject   14 | true: reflective | pred: active     | trials voting reflective: 0/20 | WRONG
+  Subject   15 | true: reflective | pred: active     | trials voting reflective: 1/20 | WRONG
+  Subject   16 | true: reflective | pred: reflective | trials voting reflective: 20/20 | CORRECT
+  Subject   17 | true: reflective | pred: active     | trials voting reflective: 0/20 | WRONG
+  Subject   18 | true: reflective | pred: reflective | trials voting reflective: 20/20 | CORRECT
+  Accuracy 55.56% (10/18), 95% CI [30.8, 78.5] | Macro P/R/F1 56.92/55.56/53.25 | CM [[7 2] [6 3]]
+  Tied trials (instance vote): 10
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_mil_rf/

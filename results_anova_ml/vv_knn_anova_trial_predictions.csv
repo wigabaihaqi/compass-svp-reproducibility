@@ -116,7 +116,7 @@ subject,trial,true_class,pred_trial,n_units,units_class1,tie
 5,95,0,1,15,12,False
 5,96,0,1,15,14,False
 5,97,0,1,15,11,False
-5,98,0,1,15,13,False
+5,98,0,1,15,12,False
 5,99,0,1,15,12,False
 5,100,0,1,15,11,False
 6,101,1,0,15,7,False

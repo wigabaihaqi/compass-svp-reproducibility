@@ -1,0 +1,78 @@
+dimension                    model                            change  correct_before  correct_after   subjects_lost subjects_gained
+       VV  COMPASS-SVP (Euclidean)         v1->A0 (n_init; software)               8              8               7               9
+       VV  COMPASS-SVP (Euclidean)       A0->A (AR subject tie rule)               8              8               -               -
+       VV  COMPASS-SVP (Euclidean)          A->B (AR subject-8 data)               8              8               -               -
+       VV  COMPASS-SVP (Euclidean) B->C (symmetric subject tie rule)               8              8               -               -
+       VV  COMPASS-SVP (Euclidean)                     v1->C (total)               8              8               7               9
+       VV     COMPASS-SVP (Cosine)         v1->A0 (n_init; software)               3              4               -               8
+       VV     COMPASS-SVP (Cosine)       A0->A (AR subject tie rule)               4              4               -               -
+       VV     COMPASS-SVP (Cosine)          A->B (AR subject-8 data)               4              4               -               -
+       VV     COMPASS-SVP (Cosine) B->C (symmetric subject tie rule)               4              4               -               -
+       VV     COMPASS-SVP (Cosine)                     v1->C (total)               3              4               -               8
+       VV           SVM (Baseline)         v1->A0 (n_init; software)               7              7               -               -
+       VV           SVM (Baseline)       A0->A (AR subject tie rule)               7              7               -               -
+       VV           SVM (Baseline)          A->B (AR subject-8 data)               7              7               -               -
+       VV           SVM (Baseline) B->C (symmetric subject tie rule)               7              7               -               -
+       VV           SVM (Baseline)                     v1->C (total)               7              7               -               -
+       VV Random Forest (Baseline)         v1->A0 (n_init; software)               2              2               4               9
+       VV Random Forest (Baseline)       A0->A (AR subject tie rule)               2              2               -               -
+       VV Random Forest (Baseline)          A->B (AR subject-8 data)               2              2               -               -
+       VV Random Forest (Baseline) B->C (symmetric subject tie rule)               2              2               -               -
+       VV Random Forest (Baseline)                     v1->C (total)               2              2               4               9
+       VV           MLP (Baseline)         v1->A0 (n_init; software)               4              4               -               -
+       VV           MLP (Baseline)       A0->A (AR subject tie rule)               4              4               -               -
+       VV           MLP (Baseline)          A->B (AR subject-8 data)               4              4               -               -
+       VV           MLP (Baseline) B->C (symmetric subject tie rule)               4              4               -               -
+       VV           MLP (Baseline)                     v1->C (total)               4              4               -               -
+       VV           KNN (Baseline)         v1->A0 (n_init; software)               4              4               -               -
+       VV           KNN (Baseline)       A0->A (AR subject tie rule)               4              4               -               -
+       VV           KNN (Baseline)          A->B (AR subject-8 data)               4              4               -               -
+       VV           KNN (Baseline) B->C (symmetric subject tie rule)               4              3               6               -
+       VV           KNN (Baseline)                     v1->C (total)               4              3               6               -
+       AR  COMPASS-SVP (Euclidean)         v1->A0 (n_init; software)              10             11               -               1
+       AR  COMPASS-SVP (Euclidean)       A0->A (AR subject tie rule)              11             10             1 7              15
+       AR  COMPASS-SVP (Euclidean)          A->B (AR subject-8 data)              10              5 4 8 11 13 14 15               1
+       AR  COMPASS-SVP (Euclidean) B->C (symmetric subject tie rule)               5              6               -               7
+       AR  COMPASS-SVP (Euclidean)                     v1->C (total)              10              6    4 8 11 13 14               1
+       AR     COMPASS-SVP (Cosine)         v1->A0 (n_init; software)              11             10              15               -
+       AR     COMPASS-SVP (Cosine)       A0->A (AR subject tie rule)              10             10               6              11
+       AR     COMPASS-SVP (Cosine)          A->B (AR subject-8 data)              10              8         8 11 14              15
+       AR     COMPASS-SVP (Cosine) B->C (symmetric subject tie rule)               8              9               -               3
+       AR     COMPASS-SVP (Cosine)                     v1->C (total)              11              9          6 8 14               3
+       AR           SVM (Baseline)         v1->A0 (n_init; software)               8              8               -               -
+       AR           SVM (Baseline)       A0->A (AR subject tie rule)               8              8               -               -
+       AR           SVM (Baseline)          A->B (AR subject-8 data)               8              6             8 9               -
+       AR           SVM (Baseline) B->C (symmetric subject tie rule)               6              6               -               -
+       AR           SVM (Baseline)                     v1->C (total)               8              6             8 9               -
+       AR Random Forest (Baseline)         v1->A0 (n_init; software)               8              8               -               -
+       AR Random Forest (Baseline)       A0->A (AR subject tie rule)               8              8               -               -
+       AR Random Forest (Baseline)          A->B (AR subject-8 data)               8              6             8 9               -
+       AR Random Forest (Baseline) B->C (symmetric subject tie rule)               6              6               -               -
+       AR Random Forest (Baseline)                     v1->C (total)               8              6             8 9               -
+       AR           MLP (Baseline)         v1->A0 (n_init; software)               8              8               1               2
+       AR           MLP (Baseline)       A0->A (AR subject tie rule)               8              7               2               -
+       AR           MLP (Baseline)          A->B (AR subject-8 data)               7              5             8 9               -
+       AR           MLP (Baseline) B->C (symmetric subject tie rule)               5              5               -               -
+       AR           MLP (Baseline)                     v1->C (total)               8              5           1 8 9               -
+       AR           KNN (Baseline)         v1->A0 (n_init; software)               8              8               -               -
+       AR           KNN (Baseline)       A0->A (AR subject tie rule)               8              9               -              14
+       AR           KNN (Baseline)          A->B (AR subject-8 data)               9              7          8 9 12              17
+       AR           KNN (Baseline) B->C (symmetric subject tie rule)               7              6              17               -
+       AR           KNN (Baseline)                     v1->C (total)               8              6          8 9 12              14
+
+First-manuscript Table 2 entries that do not match the notebook output:
+dimension                   model          metric  manuscript_v1  notebook_v1              status
+       VV    COMPASS-SVP (Cosine)       win_acc_%          42.15        40.87 transcription error
+       VV    COMPASS-SVP (Cosine) subj_macro_f1_%          28.50        29.29 transcription error
+       AR COMPASS-SVP (Euclidean)       win_acc_%          51.20        57.33 transcription error
+       AR COMPASS-SVP (Euclidean)     trial_acc_%          52.78        54.17 transcription error
+       AR COMPASS-SVP (Euclidean) subj_macro_f1_%          54.80        55.00 transcription error
+       AR          KNN (Baseline)      subj_acc_%          50.00        44.44 transcription error
+       AR          KNN (Baseline) subj_macro_f1_%          49.85        43.75 transcription error
+
+                                       comparison  identical trial_ids_subject8
+                  original subject 8 vs subject 9       True            161-180
+                 corrected subject 8 vs subject 9      False            141-160
+all other 16 subjects, original vs corrected file       True                  -
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/reconciliation/

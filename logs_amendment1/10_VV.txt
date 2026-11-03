@@ -1,0 +1,17 @@
+Label-permutation test | Verbal-Visual | PLV | observed: euclidean 80.00%, cosine 40.00%
+Exact test: 252 label assignments
+  25/252
+  50/252
+  75/252
+  100/252
+  125/252
+  150/252
+  175/252
+  200/252
+  225/252
+  250/252
+dimension feature    metric  test  n_permutations  observed_subj_acc_%  null_mean_%  null_95th_percentile_%  n_null_at_least_observed  p_permutation
+       VV     plv euclidean exact             252                 80.0        44.21                    80.0                        20         0.0794
+       VV     plv    cosine exact             252                 40.0        48.81                    80.0                       190         0.7540
+
+Saved to /Users/wigabaihaqi/Library/CloudStorage/GoogleDrive-wiga@amikompurwokerto.ac.id/My Drive/Doktor Teknik Elektro/Semester III/Paper/IJIES/compass-svp-reproducibility/results_compass/
