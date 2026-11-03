@@ -122,9 +122,10 @@ Each prototype is a vector of 28 channel-pair values, so it can be drawn directl
   Reflective). A 150 vs. 150 window tie, which did not occur, would still fall back to Class 1.
 - **Reason:** the Class-1 rule favours one class: a tied Class-1 subject is always counted as correct and a tied
   Class-0 subject always as wrong.
-- **Timing:** decided on 3 November 2026, after the results of the main benchmark and of Analyses 1-3 had been
-  seen. This departs from the out-of-scope item "choosing a tie rule after seeing results" and is therefore reported
-  as a post-hoc change in the manuscript.
+- **Timing:** the change was motivated by the asymmetry of the Class-1 rule. It was decided on 3 November 2026,
+  when the results of the main benchmark and of Analyses 1-3 were already known, which the plan lists as out of
+  scope ("choosing a tie rule after seeing results"); results under the earlier rule are therefore reported as a
+  sensitivity analysis.
 - **Reporting:**
   - all subject-level results use the new rule;
   - results under the Class-1 rule are reported as a sensitivity analysis (column `Subj Acc Class1 Tie (%)` and

@@ -149,7 +149,8 @@ The rerun for Amendment 1 of `analysis_plan/analysis_plan_v1.md` (steps 02, 03, 
 macOS with the same package versions (see `logs_amendment1/versions.txt`). Random-forest results (the Random
 Forest baseline, Random Forest + ANOVA and MIL-RF) can differ slightly between platforms despite fixed seeds,
 because of floating-point differences in tree construction; all other models gave identical window- and
-trial-level results on both platforms. Results of steps 04 and 12-14 are from the earlier Colab run.
+trial-level results on both platforms. Step 04 was not rerun (Colab run); steps 12-14 were run in the
+environment listed in `logs_plan_v1_versions.txt` and do not use subject-level votes.
 
 ## Running
 

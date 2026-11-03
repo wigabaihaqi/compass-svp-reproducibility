@@ -6,3 +6,4 @@ scikit-learn==1.6.1
 statsmodels==0.15.0
 matplotlib==3.10.0
 tensorflow==2.21.0   # only needed for scripts/04_sota_lstm_cnn.py
+nilearn==0.14.1      # only needed for scripts/15_prototype_glassbrain.py (figure only)
